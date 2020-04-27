@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="psychological_diagnosis_systemModelStoreContainer" CdmEntityContainer="pdsEntities">
+    <EntitySetMapping Name="record">
+      <EntityTypeMapping TypeName="psychological_diagnosis_systemModel.record">
+        <MappingFragment StoreEntitySet="record">
+          <ScalarProperty Name="GUID" ColumnName="GUID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="ANSWER_ID" ColumnName="ANSWER_ID" />
+          <ScalarProperty Name="TEST_NAME" ColumnName="TEST_NAME" />
+          <ScalarProperty Name="DATE" ColumnName="DATE" />
+          <ScalarProperty Name="TIME" ColumnName="TIME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sds_answer_card">
+      <EntityTypeMapping TypeName="psychological_diagnosis_systemModel.sds_answer_card">
+        <MappingFragment StoreEntitySet="sds_answer_card">
+          <ScalarProperty Name="GUID" ColumnName="GUID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="RECORD_ID" ColumnName="RECORD_ID" />
+          <ScalarProperty Name="QUES_NUM" ColumnName="QUES_NUM" />
+          <ScalarProperty Name="SELECT" ColumnName="SELECT" />
+          <ScalarProperty Name="TENDENCY" ColumnName="TENDENCY" />
+          <ScalarProperty Name="WEIGHT" ColumnName="WEIGHT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="self_rating_depression_scale">
+      <EntityTypeMapping TypeName="psychological_diagnosis_systemModel.self_rating_depression_scale">
+        <MappingFragment StoreEntitySet="self-rating_depression_scale">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="SELECT_NUM" ColumnName="SELECT_NUM" />
+          <ScalarProperty Name="CONTENT" ColumnName="CONTENT" />
+          <ScalarProperty Name="TENDENCY" ColumnName="TENDENCY" />
+          <ScalarProperty Name="SELECT_A_CONTENT" ColumnName="SELECT_A_CONTENT" />
+          <ScalarProperty Name="SELECT_B_CONTENT" ColumnName="SELECT_B_CONTENT" />
+          <ScalarProperty Name="SELECT_C_CONTENT" ColumnName="SELECT_C_CONTENT" />
+          <ScalarProperty Name="SELECT_D_CONTENT" ColumnName="SELECT_D_CONTENT" />
+          <ScalarProperty Name="A_WEIGHT" ColumnName="A_WEIGHT" />
+          <ScalarProperty Name="B_WEIGHT" ColumnName="B_WEIGHT" />
+          <ScalarProperty Name="C_WEIGHT" ColumnName="C_WEIGHT" />
+          <ScalarProperty Name="D_WEIGHT" ColumnName="D_WEIGHT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="university_personality_inventory">
+      <EntityTypeMapping TypeName="psychological_diagnosis_systemModel.university_personality_inventory">
+        <MappingFragment StoreEntitySet="university_personality_inventory">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="SELECT_NUM" ColumnName="SELECT_NUM" />
+          <ScalarProperty Name="CONTENT" ColumnName="CONTENT" />
+          <ScalarProperty Name="TENDENCY" ColumnName="TENDENCY" />
+          <ScalarProperty Name="SELECT_A_CONTENT" ColumnName="SELECT_A_CONTENT" />
+          <ScalarProperty Name="SELECT_B_CONTENT" ColumnName="SELECT_B_CONTENT" />
+          <ScalarProperty Name="A_WEIGHT" ColumnName="A_WEIGHT" />
+          <ScalarProperty Name="B_WEIGHT" ColumnName="B_WEIGHT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="upi_answer_card">
+      <EntityTypeMapping TypeName="psychological_diagnosis_systemModel.upi_answer_card">
+        <MappingFragment StoreEntitySet="upi_answer_card">
+          <ScalarProperty Name="GUID" ColumnName="GUID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="RECORD_ID" ColumnName="RECORD_ID" />
+          <ScalarProperty Name="QUES_NUM" ColumnName="QUES_NUM" />
+          <ScalarProperty Name="SELECT" ColumnName="SELECT" />
+          <ScalarProperty Name="TENDENCY" ColumnName="TENDENCY" />
+          <ScalarProperty Name="WEIGHT" ColumnName="WEIGHT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="user_info">
+      <EntityTypeMapping TypeName="psychological_diagnosis_systemModel.user_info">
+        <MappingFragment StoreEntitySet="user_info">
+          <ScalarProperty Name="USER_GUID" ColumnName="USER_GUID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="INPUT_DATE" ColumnName="INPUT_DATE" />
+          <ScalarProperty Name="PROVINCE" ColumnName="PROVINCE" />
+          <ScalarProperty Name="CITY" ColumnName="CITY" />
+          <ScalarProperty Name="DISTRICT_TOWN" ColumnName="DISTRICT/TOWN" />
+          <ScalarProperty Name="DETAIL_ADDRESS" ColumnName="DETAIL_ADDRESS" />
+          <ScalarProperty Name="ID_NUMBER" ColumnName="ID_NUMBER" />
+          <ScalarProperty Name="SEX" ColumnName="SEX" />
+          <ScalarProperty Name="MARRIAGE" ColumnName="MARRIAGE" />
+          <ScalarProperty Name="AGE" ColumnName="AGE" />
+          <ScalarProperty Name="EDUCATION" ColumnName="EDUCATION" />
+          <ScalarProperty Name="CAREER" ColumnName="CAREER" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="user_test">
+      <EntityTypeMapping TypeName="psychological_diagnosis_systemModel.user_test">
+        <MappingFragment StoreEntitySet="user_test">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="age" ColumnName="age" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

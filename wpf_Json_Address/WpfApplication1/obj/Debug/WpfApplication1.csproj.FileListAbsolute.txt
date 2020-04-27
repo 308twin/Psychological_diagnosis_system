@@ -1,0 +1,54 @@
+c:\users\k04\documents\visual studio 2012\Projects\WpfApplication1\WpfApplication1\bin\Debug\WpfApplication1.exe.config
+c:\users\k04\documents\visual studio 2012\Projects\WpfApplication1\WpfApplication1\obj\Debug\WpfApplication1.csprojResolveAssemblyReference.cache
+c:\users\k04\documents\visual studio 2012\Projects\WpfApplication1\WpfApplication1\obj\Debug\MainWindow.g.cs
+c:\users\k04\documents\visual studio 2012\Projects\WpfApplication1\WpfApplication1\obj\Debug\UserControls\DictrictControl.g.cs
+c:\users\k04\documents\visual studio 2012\Projects\WpfApplication1\WpfApplication1\obj\Debug\App.g.cs
+c:\users\k04\documents\visual studio 2012\Projects\WpfApplication1\WpfApplication1\obj\Debug\GeneratedInternalTypeHelper.g.cs
+c:\users\k04\documents\visual studio 2012\Projects\WpfApplication1\WpfApplication1\obj\Debug\WpfApplication1_MarkupCompile.cache
+c:\users\k04\documents\visual studio 2012\Projects\WpfApplication1\WpfApplication1\obj\Debug\WpfApplication1_MarkupCompile.lref
+c:\users\k04\documents\visual studio 2012\Projects\WpfApplication1\WpfApplication1\bin\Debug\WpfApplication1.exe
+c:\users\k04\documents\visual studio 2012\Projects\WpfApplication1\WpfApplication1\bin\Debug\WpfApplication1.pdb
+c:\users\k04\documents\visual studio 2012\Projects\WpfApplication1\WpfApplication1\bin\Debug\Newtonsoft.Json.dll
+c:\users\k04\documents\visual studio 2012\Projects\WpfApplication1\WpfApplication1\obj\Debug\MainWindow.baml
+c:\users\k04\documents\visual studio 2012\Projects\WpfApplication1\WpfApplication1\obj\Debug\UserControls\DictrictControl.baml
+c:\users\k04\documents\visual studio 2012\Projects\WpfApplication1\WpfApplication1\obj\Debug\WpfApplication1.g.resources
+c:\users\k04\documents\visual studio 2012\Projects\WpfApplication1\WpfApplication1\obj\Debug\WpfApplication1.Properties.Resources.resources
+c:\users\k04\documents\visual studio 2012\Projects\WpfApplication1\WpfApplication1\obj\Debug\WpfApplication1.csproj.GenerateResource.Cache
+c:\users\k04\documents\visual studio 2012\Projects\WpfApplication1\WpfApplication1\obj\Debug\WpfApplication1.exe
+c:\users\k04\documents\visual studio 2012\Projects\WpfApplication1\WpfApplication1\obj\Debug\WpfApplication1.pdb
+C:\Users\jsx\Desktop\wpf_Json_Address\WpfApplication1\bin\Debug\WpfApplication1.exe.config
+C:\Users\jsx\Desktop\wpf_Json_Address\WpfApplication1\obj\Debug\WpfApplication1.exe
+C:\Users\jsx\Desktop\wpf_Json_Address\WpfApplication1\obj\Debug\WpfApplication1.pdb
+C:\Users\jsx\Desktop\wpf_Json_Address\WpfApplication1\bin\Debug\WpfApplication1.exe
+C:\Users\jsx\Desktop\wpf_Json_Address\WpfApplication1\bin\Debug\WpfApplication1.pdb
+C:\Users\jsx\Desktop\wpf_Json_Address\WpfApplication1\obj\Debug\MainWindow.g.cs
+C:\Users\jsx\Desktop\wpf_Json_Address\WpfApplication1\obj\Debug\UserControls\DictrictControl.g.cs
+C:\Users\jsx\Desktop\wpf_Json_Address\WpfApplication1\obj\Debug\App.g.cs
+C:\Users\jsx\Desktop\wpf_Json_Address\WpfApplication1\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\jsx\Desktop\wpf_Json_Address\WpfApplication1\obj\Debug\WpfApplication1_MarkupCompile.cache
+C:\Users\jsx\Desktop\wpf_Json_Address\WpfApplication1\obj\Debug\WpfApplication1_MarkupCompile.lref
+C:\Users\jsx\Desktop\wpf_Json_Address\WpfApplication1\obj\Debug\MainWindow.baml
+C:\Users\jsx\Desktop\wpf_Json_Address\WpfApplication1\obj\Debug\UserControls\DictrictControl.baml
+C:\Users\jsx\Desktop\wpf_Json_Address\WpfApplication1\obj\Debug\WpfApplication1.g.resources
+C:\Users\jsx\Desktop\wpf_Json_Address\WpfApplication1\obj\Debug\WpfApplication1.Properties.Resources.resources
+C:\Users\jsx\Desktop\wpf_Json_Address\WpfApplication1\obj\Debug\WpfApplication1.csproj.GenerateResource.Cache
+C:\Users\jsx\Desktop\wpf_Json_Address\WpfApplication1\obj\Debug\WpfApplication1.csprojResolveAssemblyReference.cache
+D:\Psychological diagnosis system\wpf_Json_Address\WpfApplication1\bin\Debug\WpfApplication1.exe.config
+D:\Psychological diagnosis system\wpf_Json_Address\WpfApplication1\bin\Debug\WpfApplication1.exe
+D:\Psychological diagnosis system\wpf_Json_Address\WpfApplication1\bin\Debug\WpfApplication1.pdb
+D:\Psychological diagnosis system\wpf_Json_Address\WpfApplication1\bin\Debug\Newtonsoft.Json.dll
+D:\Psychological diagnosis system\wpf_Json_Address\WpfApplication1\obj\Debug\WpfApplication1.csprojAssemblyReference.cache
+D:\Psychological diagnosis system\wpf_Json_Address\WpfApplication1\obj\Debug\MainWindow.g.cs
+D:\Psychological diagnosis system\wpf_Json_Address\WpfApplication1\obj\Debug\UserControls\DictrictControl.g.cs
+D:\Psychological diagnosis system\wpf_Json_Address\WpfApplication1\obj\Debug\App.g.cs
+D:\Psychological diagnosis system\wpf_Json_Address\WpfApplication1\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\Psychological diagnosis system\wpf_Json_Address\WpfApplication1\obj\Debug\WpfApplication1_MarkupCompile.cache
+D:\Psychological diagnosis system\wpf_Json_Address\WpfApplication1\obj\Debug\WpfApplication1_MarkupCompile.lref
+D:\Psychological diagnosis system\wpf_Json_Address\WpfApplication1\obj\Debug\MainWindow.baml
+D:\Psychological diagnosis system\wpf_Json_Address\WpfApplication1\obj\Debug\UserControls\DictrictControl.baml
+D:\Psychological diagnosis system\wpf_Json_Address\WpfApplication1\obj\Debug\WpfApplication1.g.resources
+D:\Psychological diagnosis system\wpf_Json_Address\WpfApplication1\obj\Debug\WpfApplication1.Properties.Resources.resources
+D:\Psychological diagnosis system\wpf_Json_Address\WpfApplication1\obj\Debug\WpfApplication1.csproj.GenerateResource.cache
+D:\Psychological diagnosis system\wpf_Json_Address\WpfApplication1\obj\Debug\WpfApplication1.csproj.CopyComplete
+D:\Psychological diagnosis system\wpf_Json_Address\WpfApplication1\obj\Debug\WpfApplication1.exe
+D:\Psychological diagnosis system\wpf_Json_Address\WpfApplication1\obj\Debug\WpfApplication1.pdb

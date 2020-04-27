@@ -1,0 +1,105 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Psychological_diagnosis_system.Views"
+        xmlns:UserControls="clr-namespace:Psychological_diagnosis_system.UserControls" x:Class="Psychological_diagnosis_system.Views.SearchWindow"
+        mc:Ignorable="d"
+        Title="查找" Height="300" Width="360" ResizeMode="NoResize">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="15" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="40" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <WrapPanel Grid.Row="0" Orientation="Vertical">
+            <WrapPanel Height="15">
+                <CheckBox x:Name="select_ID"></CheckBox>
+                <TextBlock Text="ID:"/>
+            </WrapPanel>
+            <TextBox x:Name="ID" Width="150"/>
+        </WrapPanel>
+        <WrapPanel Grid.Row="0" Grid.Column="1" Orientation="Vertical">
+            <WrapPanel Height="15">
+                <CheckBox x:Name="select_Name"></CheckBox>
+                <TextBlock Text="姓名:"/>
+            </WrapPanel>
+            <TextBox x:Name="Name" Width="150"/>
+        </WrapPanel>
+        <WrapPanel Grid.Row="1" Grid.Column="0" Orientation="Vertical">
+            <WrapPanel Height="15">
+                <CheckBox x:Name="select_IdNumber"></CheckBox>
+                <TextBlock Text="身份证号码:"/>
+            </WrapPanel>
+            <TextBox x:Name="IdNumber" Width="150"/>
+        </WrapPanel>
+        <WrapPanel Grid.Row="1" Grid.Column="1" Orientation="Vertical">
+            <WrapPanel Height="15">
+                <CheckBox x:Name="select_Age"></CheckBox>
+                <TextBlock Text="年龄:"/>
+            </WrapPanel>
+            <TextBox x:Name="Age" Width="150"/>
+        </WrapPanel>
+        <WrapPanel Grid.Row="2" Orientation="Vertical">
+            <WrapPanel Height="15">
+                <CheckBox x:Name="select_Sex"></CheckBox>
+                <TextBlock Text="性别:"/>
+            </WrapPanel>
+            <ComboBox x:Name="Sex" Width="60">
+                <ComboBoxItem Content="男" />
+                <ComboBoxItem Content="女"/>
+                <ComboBoxItem Content="其它"/>
+            </ComboBox>
+        </WrapPanel>
+        <WrapPanel Grid.Row="2" Grid.Column="1" Orientation="Vertical">
+            <WrapPanel Height="15">
+                <CheckBox x:Name="select_Education"></CheckBox>
+                <TextBlock Text="学历:"/>
+            </WrapPanel>
+            <ComboBox x:Name="Education" Width="60">
+                <ComboBoxItem Content="小学" />
+                <ComboBoxItem Content="初中"/>
+                <ComboBoxItem Content="高中"/>
+                <ComboBoxItem Content="大专"/>
+                <ComboBoxItem Content="本科"/>
+                <ComboBoxItem Content="硕士"/>
+                <ComboBoxItem Content="博士"/>
+            </ComboBox>
+        </WrapPanel>
+        <WrapPanel Grid.Row="3" Orientation="Vertical">
+            <WrapPanel Height="15">
+                <CheckBox x:Name="select_Marriage"></CheckBox>
+                <TextBlock Text="婚姻状况:"/>
+            </WrapPanel>
+            <ComboBox x:Name="Marriage" Width="60">
+                <ComboBoxItem Content="未婚" />
+                <ComboBoxItem Content="已婚"/>
+                <ComboBoxItem Content="丧偶"/>
+            </ComboBox>
+        </WrapPanel>
+        <WrapPanel Grid.Row="4" Grid.ColumnSpan="2" Orientation="Vertical">
+            <WrapPanel Height="15">
+                <CheckBox></CheckBox>
+                <TextBlock Text="省、市、区、详细地址:"/>
+            </WrapPanel>                  
+        </WrapPanel>
+        <WrapPanel Grid.Row="5" Grid.ColumnSpan="2">
+            <UserControls:DistrictControl Height="40" Width="360"/>
+        </WrapPanel>
+        <Button x:Name="Ensure" Grid.Row="6" Grid.Column="0" Height="30" Width="50" HorizontalAlignment="Center" Click="Ensure_Click">
+            确定
+        </Button>
+        <Button x:Name="Close" Click="Close_Click" Grid.Row="6" Grid.Column="1" Height="30" Width="50" HorizontalAlignment="Center">
+            退出
+        </Button>
+    </Grid>
+</Window>

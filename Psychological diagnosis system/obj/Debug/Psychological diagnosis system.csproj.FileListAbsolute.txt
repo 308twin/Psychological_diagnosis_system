@@ -1,0 +1,119 @@
+D:\Psychological diagnosis system\Psychological diagnosis system\bin\Debug\Psychological diagnosis system.exe.config
+D:\Psychological diagnosis system\Psychological diagnosis system\bin\Debug\Psychological diagnosis system.exe
+D:\Psychological diagnosis system\Psychological diagnosis system\bin\Debug\Psychological diagnosis system.pdb
+D:\Psychological diagnosis system\Psychological diagnosis system\bin\Debug\CommonServiceLocator.dll
+D:\Psychological diagnosis system\Psychological diagnosis system\bin\Debug\Prism.dll
+D:\Psychological diagnosis system\Psychological diagnosis system\bin\Debug\Prism.Wpf.dll
+D:\Psychological diagnosis system\Psychological diagnosis system\bin\Debug\System.ValueTuple.dll
+D:\Psychological diagnosis system\Psychological diagnosis system\bin\Debug\System.Windows.Interactivity.dll
+D:\Psychological diagnosis system\Psychological diagnosis system\bin\Debug\Prism.pdb
+D:\Psychological diagnosis system\Psychological diagnosis system\bin\Debug\Prism.xml
+D:\Psychological diagnosis system\Psychological diagnosis system\bin\Debug\Prism.Wpf.pdb
+D:\Psychological diagnosis system\Psychological diagnosis system\bin\Debug\Prism.Wpf.xml
+D:\Psychological diagnosis system\Psychological diagnosis system\bin\Debug\System.ValueTuple.xml
+D:\Psychological diagnosis system\Psychological diagnosis system\obj\Debug\MainWindow.g.cs
+D:\Psychological diagnosis system\Psychological diagnosis system\obj\Debug\App.g.cs
+D:\Psychological diagnosis system\Psychological diagnosis system\obj\Debug\Psychological diagnosis system_MarkupCompile.cache
+D:\Psychological diagnosis system\Psychological diagnosis system\obj\Debug\Psychological diagnosis system_MarkupCompile.lref
+D:\Psychological diagnosis system\Psychological diagnosis system\obj\Debug\MainWindow.baml
+D:\Psychological diagnosis system\Psychological diagnosis system\obj\Debug\Psychological diagnosis system.g.resources
+D:\Psychological diagnosis system\Psychological diagnosis system\obj\Debug\Psychological_diagnosis_system.Properties.Resources.resources
+D:\Psychological diagnosis system\Psychological diagnosis system\obj\Debug\Psychological diagnosis system.csproj.GenerateResource.cache
+D:\Psychological diagnosis system\Psychological diagnosis system\obj\Debug\Psychological diagnosis system.csproj.CopyComplete
+D:\Psychological diagnosis system\Psychological diagnosis system\obj\Debug\Psychological diagnosis system.exe
+D:\Psychological diagnosis system\Psychological diagnosis system\obj\Debug\Psychological diagnosis system.pdb
+D:\Psychological diagnosis system\Psychological diagnosis system\bin\Debug\Antlr3.Runtime.dll
+D:\Psychological diagnosis system\Psychological diagnosis system\bin\Debug\FluentNHibernate.dll
+D:\Psychological diagnosis system\Psychological diagnosis system\bin\Debug\Iesi.Collections.dll
+D:\Psychological diagnosis system\Psychological diagnosis system\bin\Debug\NHibernate.dll
+D:\Psychological diagnosis system\Psychological diagnosis system\bin\Debug\Prism.Mef.Wpf.dll
+D:\Psychological diagnosis system\Psychological diagnosis system\bin\Debug\Remotion.Linq.dll
+D:\Psychological diagnosis system\Psychological diagnosis system\bin\Debug\Remotion.Linq.EagerFetching.dll
+D:\Psychological diagnosis system\Psychological diagnosis system\bin\Debug\Antlr3.Runtime.xml
+D:\Psychological diagnosis system\Psychological diagnosis system\bin\Debug\FluentNHibernate.xml
+D:\Psychological diagnosis system\Psychological diagnosis system\bin\Debug\Iesi.Collections.xml
+D:\Psychological diagnosis system\Psychological diagnosis system\bin\Debug\NHibernate.xml
+D:\Psychological diagnosis system\Psychological diagnosis system\bin\Debug\Prism.Mef.Wpf.xml
+D:\Psychological diagnosis system\Psychological diagnosis system\bin\Debug\Remotion.Linq.xml
+D:\Psychological diagnosis system\Psychological diagnosis system\bin\Debug\Remotion.Linq.EagerFetching.xml
+D:\Psychological diagnosis system\Psychological diagnosis system\bin\Debug\EntityFramework.dll
+D:\Psychological diagnosis system\Psychological diagnosis system\bin\Debug\EntityFramework.SqlServer.dll
+D:\Psychological diagnosis system\Psychological diagnosis system\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Psychological diagnosis system\Psychological diagnosis system\bin\Debug\Microsoft.Bcl.HashCode.dll
+D:\Psychological diagnosis system\Psychological diagnosis system\bin\Debug\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\Psychological diagnosis system\Psychological diagnosis system\bin\Debug\Microsoft.EntityFrameworkCore.dll
+D:\Psychological diagnosis system\Psychological diagnosis system\bin\Debug\Microsoft.EntityFrameworkCore.Relational.dll
+D:\Psychological diagnosis system\Psychological diagnosis system\bin\Debug\Microsoft.Extensions.Caching.Abstractions.dll
+D:\Psychological diagnosis system\Psychological diagnosis system\bin\Debug\Microsoft.Extensions.Caching.Memory.dll
+D:\Psychological diagnosis system\Psychological diagnosis system\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\Psychological diagnosis system\Psychological diagnosis system\bin\Debug\Microsoft.Extensions.Configuration.Binder.dll
+D:\Psychological diagnosis system\Psychological diagnosis system\bin\Debug\Microsoft.Extensions.Configuration.dll
+D:\Psychological diagnosis system\Psychological diagnosis system\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\Psychological diagnosis system\Psychological diagnosis system\bin\Debug\Microsoft.Extensions.DependencyInjection.dll
+D:\Psychological diagnosis system\Psychological diagnosis system\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
+D:\Psychological diagnosis system\Psychological diagnosis system\bin\Debug\Microsoft.Extensions.Logging.dll
+D:\Psychological diagnosis system\Psychological diagnosis system\bin\Debug\Microsoft.Extensions.Options.dll
+D:\Psychological diagnosis system\Psychological diagnosis system\bin\Debug\Microsoft.Extensions.Primitives.dll
+D:\Psychological diagnosis system\Psychological diagnosis system\bin\Debug\Newtonsoft.Json.dll
+D:\Psychological diagnosis system\Psychological diagnosis system\bin\Debug\Pomelo.JsonObject.dll
+D:\Psychological diagnosis system\Psychological diagnosis system\bin\Debug\System.Buffers.dll
+D:\Psychological diagnosis system\Psychological diagnosis system\bin\Debug\System.Collections.Immutable.dll
+D:\Psychological diagnosis system\Psychological diagnosis system\bin\Debug\System.ComponentModel.Annotations.dll
+D:\Psychological diagnosis system\Psychological diagnosis system\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+D:\Psychological diagnosis system\Psychological diagnosis system\bin\Debug\System.Memory.dll
+D:\Psychological diagnosis system\Psychological diagnosis system\bin\Debug\System.Numerics.Vectors.dll
+D:\Psychological diagnosis system\Psychological diagnosis system\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\Psychological diagnosis system\Psychological diagnosis system\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\Psychological diagnosis system\Psychological diagnosis system\bin\Debug\EntityFramework.xml
+D:\Psychological diagnosis system\Psychological diagnosis system\bin\Debug\EntityFramework.SqlServer.xml
+D:\Psychological diagnosis system\Psychological diagnosis system\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+D:\Psychological diagnosis system\Psychological diagnosis system\bin\Debug\Microsoft.Bcl.HashCode.xml
+D:\Psychological diagnosis system\Psychological diagnosis system\bin\Debug\Microsoft.EntityFrameworkCore.xml
+D:\Psychological diagnosis system\Psychological diagnosis system\bin\Debug\Microsoft.EntityFrameworkCore.Abstractions.xml
+D:\Psychological diagnosis system\Psychological diagnosis system\bin\Debug\Microsoft.EntityFrameworkCore.Relational.xml
+D:\Psychological diagnosis system\Psychological diagnosis system\bin\Debug\Microsoft.Extensions.Caching.Abstractions.xml
+D:\Psychological diagnosis system\Psychological diagnosis system\bin\Debug\Microsoft.Extensions.Caching.Memory.xml
+D:\Psychological diagnosis system\Psychological diagnosis system\bin\Debug\Microsoft.Extensions.Configuration.xml
+D:\Psychological diagnosis system\Psychological diagnosis system\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.xml
+D:\Psychological diagnosis system\Psychological diagnosis system\bin\Debug\Microsoft.Extensions.Configuration.Binder.xml
+D:\Psychological diagnosis system\Psychological diagnosis system\bin\Debug\Microsoft.Extensions.DependencyInjection.xml
+D:\Psychological diagnosis system\Psychological diagnosis system\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+D:\Psychological diagnosis system\Psychological diagnosis system\bin\Debug\Microsoft.Extensions.Logging.xml
+D:\Psychological diagnosis system\Psychological diagnosis system\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml
+D:\Psychological diagnosis system\Psychological diagnosis system\bin\Debug\Microsoft.Extensions.Options.xml
+D:\Psychological diagnosis system\Psychological diagnosis system\bin\Debug\Microsoft.Extensions.Primitives.xml
+D:\Psychological diagnosis system\Psychological diagnosis system\bin\Debug\Newtonsoft.Json.xml
+D:\Psychological diagnosis system\Psychological diagnosis system\bin\Debug\System.Buffers.xml
+D:\Psychological diagnosis system\Psychological diagnosis system\bin\Debug\System.Collections.Immutable.xml
+D:\Psychological diagnosis system\Psychological diagnosis system\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+D:\Psychological diagnosis system\Psychological diagnosis system\bin\Debug\System.Memory.xml
+D:\Psychological diagnosis system\Psychological diagnosis system\bin\Debug\System.Numerics.Vectors.xml
+D:\Psychological diagnosis system\Psychological diagnosis system\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\Psychological diagnosis system\Psychological diagnosis system\bin\Debug\System.Threading.Tasks.Extensions.xml
+D:\Psychological diagnosis system\Psychological diagnosis system\bin\Debug\zh-Hans\EntityFramework.resources.dll
+D:\Psychological diagnosis system\Psychological diagnosis system\bin\Debug\zh-Hans\EntityFramework.SqlServer.resources.dll
+D:\Psychological diagnosis system\Psychological diagnosis system\bin\Debug\BouncyCastle.Crypto.dll
+D:\Psychological diagnosis system\Psychological diagnosis system\bin\Debug\Google.Protobuf.dll
+D:\Psychological diagnosis system\Psychological diagnosis system\bin\Debug\MySql.Data.dll
+D:\Psychological diagnosis system\Psychological diagnosis system\bin\Debug\Renci.SshNet.dll
+D:\Psychological diagnosis system\Psychological diagnosis system\bin\Debug\Google.Protobuf.xml
+D:\Psychological diagnosis system\Psychological diagnosis system\bin\Debug\Renci.SshNet.xml
+D:\Psychological diagnosis system\Psychological diagnosis system\bin\Debug\MySql.Data.Entity.EF6.dll
+D:\Psychological diagnosis system\Psychological diagnosis system\obj\Debug\Psychological diagnosis system_Content.g.cs
+D:\Psychological diagnosis system\Psychological diagnosis system\obj\Debug\Psychological diagnosis system.csprojAssemblyReference.cache
+D:\Psychological diagnosis system\Psychological diagnosis system\obj\Debug\Psychological diagnosis system.exe.config
+D:\Psychological diagnosis system\Psychological diagnosis system\bin\Debug\AreaSelect.dll
+D:\Psychological diagnosis system\Psychological diagnosis system\bin\Debug\AreaSelect.pdb
+D:\Psychological diagnosis system\Psychological diagnosis system\obj\Debug\UserControls\DistrictControl.g.cs
+D:\Psychological diagnosis system\Psychological diagnosis system\obj\Debug\UserControls\DistrictControl.baml
+D:\Psychological diagnosis system\Psychological diagnosis system\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\Psychological diagnosis system\Psychological diagnosis system\bin\Debug\WpfApplication1.exe
+D:\Psychological diagnosis system\Psychological diagnosis system\bin\Debug\WpfApplication1.pdb
+D:\Psychological diagnosis system\Psychological diagnosis system\bin\Debug\WpfApplication1.exe.config
+D:\Psychological diagnosis system\Psychological diagnosis system\obj\Debug\Views\AreaSelect.g.cs
+D:\Psychological diagnosis system\Psychological diagnosis system\obj\Debug\Views\AreaSelect.baml
+D:\Psychological diagnosis system\Psychological diagnosis system\obj\Debug\Views\UserWindow.g.cs
+D:\Psychological diagnosis system\Psychological diagnosis system\obj\Debug\Views\UserWindow.baml
+D:\Psychological diagnosis system\Psychological diagnosis system\obj\Debug\Views\SearchWindow.g.cs
+D:\Psychological diagnosis system\Psychological diagnosis system\obj\Debug\Views\SearchWindow.baml
+D:\Psychological diagnosis system\Psychological diagnosis system\obj\Debug\ViewModels\BorderlessWindow.baml

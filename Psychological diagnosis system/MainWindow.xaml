@@ -1,0 +1,200 @@
+﻿<Window x:Class="Psychological_diagnosis_system.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Psychological_diagnosis_system"
+        mc:Ignorable="d"
+        Title="心理测评系统" Height="450" Width="1400" WindowStartupLocation="CenterScreen"  ResizeMode="CanResizeWithGrip">
+    
+    <Grid ShowGridLines="False">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="20"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid>
+            <DockPanel>
+                <Menu DockPanel.Dock="Top" Background="#FFE6E6E6" Height="22">
+                    <MenuItem Header="_文件">
+                        <MenuItem x:Name="Create_New_Search" Header="_新建查询" InputGestureText="Ctrl+N" Margin="0,0,0,0"/>
+                        <MenuItem x:Name="Quit" Header="_退出" InputGestureText="Ctrl+F4" Click="Exit_Click" Margin="0,0,0,0"/>
+                    </MenuItem>
+                    <MenuItem Header="_管理配置">
+                        <MenuItem x:Name="Manage_Conf" Header="_用户管理"  Margin="0,0,0,0"/>
+                    </MenuItem>
+                    <MenuItem Header="_操作">
+                        <MenuItem x:Name="Del_List" Header="_清除列表"  Margin="0,0,0,0">
+                        </MenuItem>
+                        <MenuItem x:Name="Revise_Info" Header="_修改信息"  Margin="0,0,0,0">
+                        </MenuItem>
+                        <MenuItem x:Name="Del_Info" Header="_删除信息"  Margin="0,0,0,0">
+                        </MenuItem>
+                        <MenuItem x:Name="Enter_Info" Header="_录入信息"  Margin="0,0,0,0">
+                        </MenuItem>
+                    </MenuItem>
+                    <MenuItem Header="_分析报告">
+                        <MenuItem x:Name="Build_Report" Header="_生成分析报告"  Margin="0,0,0,0">
+                        </MenuItem>
+                        <MenuItem x:Name="Print_Report" Header="_打印分析报告"  Margin="0,0,0,0">
+                        </MenuItem>
+                    </MenuItem>
+                    <MenuItem Header="_工具">
+                        <MenuItem x:Name="Export_Data" Header="_导出资料数据"  Margin="0,0,0,0">
+                        </MenuItem>
+                        <MenuItem x:Name="Input_Data" Header="_导入资料数据"  Margin="0,0,0,0">
+                        </MenuItem>
+                    </MenuItem>
+                    <MenuItem Header="_心理学与精神分析">
+                        <MenuItem x:Name="Psychology_Development" Header="_心理学发展"  Margin="0,0,0,0">
+                        </MenuItem>
+                    </MenuItem>
+                    <MenuItem Header="_帮助">
+                        <MenuItem x:Name="Use_Principles" Header="_使用原则"  Margin="0,0,0,0">
+                        </MenuItem>
+                    </MenuItem>
+                </Menu>
+                <ToolBarTray DockPanel.Dock="Top" Height="64" VerticalAlignment="Top" Background="#FFE6E6E6" Margin="0,-1,0,0">
+                    <ToolBar x:Name="ToolBar_Main" Background="#FFE6E6E6" ToolBarTray.IsLocked="True" Margin="0" Loaded="ToolBar_Loaded">
+                        <Button x:Name="Start_Answer" ToolTip="开始答题" Width="64" Click="Start_Answer_Click">
+                            <StackPanel>
+                                <Image Source="./Image/start_answer.png" Width="40" Height="40"></Image>
+                                <TextBlock HorizontalAlignment="Stretch" TextAlignment="Center">
+                            开始答题
+                                </TextBlock>
+                            </StackPanel>
+                        </Button>
+                        <Button x:Name="user_manage" ToolTip="用户管理" Width="64" Click="user_manage_Click">
+                            <StackPanel>
+                                <Image Source="./Image/add-user.png" Width="40" Height="40"></Image>
+                                <TextBlock HorizontalAlignment="Stretch" TextAlignment="Center">
+                            用户管理
+                                </TextBlock>
+                            </StackPanel>
+                        </Button>
+                        <Button x:Name="Add_Info" ToolTip="录入信息" Width="64" Command="{Binding RefreshRecordCommand}">
+                            <StackPanel>
+                                <Image Source="./Image/add.png" Width="40" Height="40"></Image>
+                                <TextBlock HorizontalAlignment="Stretch" TextAlignment="Center">
+                            录入信息
+                                </TextBlock>
+                            </StackPanel>
+                        </Button>
+
+                        <Button x:Name="search" ToolTip="条件查询" Width="64"  Command="{Binding SearchRecordCommand}">
+                            <StackPanel>
+                                <Image Source="./Image/search.png" Width="40" Height="40"></Image>
+                                <TextBlock HorizontalAlignment="Stretch" TextAlignment="Center">
+                            条件查询
+                                </TextBlock>
+                            </StackPanel>
+                        </Button>
+                        <Button x:Name="revise" ToolTip="编辑修改" Width="64">
+                            <StackPanel>
+                                <Image Source="./Image/revise.png" Width="40" Height="40"></Image>
+                                <TextBlock HorizontalAlignment="Stretch" TextAlignment="Center">
+                            编辑修改
+                                </TextBlock>
+                            </StackPanel>
+                        </Button>
+                        <Button x:Name="delete" ToolTip="删除条目" Width="64" Command="{Binding DeleteRecordCommand}">
+                            <StackPanel>
+                                <Image Source="./Image/del_project.png" Width="40" Height="40"></Image>
+                                <TextBlock HorizontalAlignment="Stretch" TextAlignment="Center">
+                            删除条目
+                                </TextBlock>
+                            </StackPanel>
+                        </Button>
+                        <Button x:Name="analytics" ToolTip="分析报告" Width="64">
+                            <StackPanel>
+                                <Image Source="./Image/analytics.png" Width="40" Height="40"></Image>
+                                <TextBlock HorizontalAlignment="Stretch" TextAlignment="Center">
+                            分析报告
+                                </TextBlock>
+                            </StackPanel>
+                        </Button>
+                        <Button x:Name="quit" ToolTip="退出系统" Width="64" Click="quit_Click">
+                            <StackPanel>
+                                <Image Source="./Image/quit.png" Width="40" Height="40" ></Image>
+                                <TextBlock HorizontalAlignment="Stretch" TextAlignment="Center">
+                            退出系统
+                                </TextBlock>
+                            </StackPanel>
+                        </Button>
+                    </ToolBar>
+                </ToolBarTray>
+
+
+                <!--<ToolBarTray DockPanel.Dock="Top" Height="20" Background="#FFE6E6E6" Margin="0,0,0,0" VerticalAlignment="Top">
+                <ToolBar x:Name="ToolBar_Text" Background="#FFE6E6E6" ToolBarTray.IsLocked="True" Margin="0" Loaded="ToolBar_Loaded">
+                    <TextBlock Height="315" TextWrapping="Wrap" Text="选择" Margin="0,1,0,0" VerticalAlignment="Top"/>
+                    <Separator></Separator>
+                    <TextBlock Height="315" TextWrapping="Wrap" Text="受试者ID" Margin="20,1,20,0" VerticalAlignment="Top"/>
+                    <Separator></Separator>
+                    <TextBlock Height="315" TextWrapping="Wrap" Text=" 姓 名 " Margin="10,1,10,0" VerticalAlignment="Top"/>
+                    <Separator></Separator>
+                    <TextBlock Height="315" TextWrapping="Wrap" Text="性别" Margin="0,1,0,0" VerticalAlignment="Top"/>
+                    <Separator></Separator>
+                    <TextBlock Height="315" TextWrapping="Wrap" Text="年龄" Margin="0,1,0,0" VerticalAlignment="Top"/>
+                    <Separator></Separator>
+                    <TextBlock Height="315" TextWrapping="Wrap" Text="婚姻" Margin="0,1,0,0" VerticalAlignment="Top"/>
+                    <Separator></Separator>
+                    <TextBlock Height="315" TextWrapping="Wrap" Text="文化程度" Margin="0,1,0,0" VerticalAlignment="Top"/>
+                    <Separator></Separator>
+                    <TextBlock Height="315" TextWrapping="Wrap" Text=" 职 业 " Margin="0,1,0,0" VerticalAlignment="Top"/>
+                    <Separator></Separator>
+                    <TextBlock Height="315" TextWrapping="Wrap" Text=" 省份 " Margin="0,1,0,0" VerticalAlignment="Top"/>
+                    <Separator></Separator>
+                    <TextBlock Height="315" TextWrapping="Wrap" Text="测评项目" Margin="20,1,20,0" VerticalAlignment="Top"/>
+                    <Separator></Separator>
+                    <TextBlock Height="315" TextWrapping="Wrap" Text="测评日期" Margin="10,1,10,0" VerticalAlignment="Top"/>
+                    <Separator></Separator>
+                    <TextBlock Height="315" TextWrapping="Wrap" Text="答题时间" Margin="0,1,0,0" VerticalAlignment="Top"/>
+                    <Separator></Separator>
+                </ToolBar>
+            </ToolBarTray>-->
+
+            </DockPanel>
+        </Grid>
+        <Grid Grid.Row="1">
+            <DataGrid x:Name="Record_Grid" Grid.Row="1" Grid.Column="0" CanUserResizeColumns="True" 
+                       ItemsSource="{Binding Records}"  HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto"
+                      CanUserAddRows="False" CanUserDeleteRows="False" CanUserReorderColumns="False" AutoGenerateColumns="False" 
+                      BorderBrush="#FF7C7C7C" GridLinesVisibility="None">
+                       
+                     
+                <DataGrid.Columns>
+                    <DataGridTemplateColumn Header="选择" SortMemberPath="IsSelected" Width="50"  >
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <CheckBox IsChecked="{Binding Path=IsSelected, UpdateSourceTrigger=PropertyChanged}"
+                                          VerticalAlignment="Center" HorizontalAlignment="Center"
+                                          Command="{Binding Path=DataContext.SelectRecordCommand,
+                                    RelativeSource={RelativeSource Mode=FindAncestor,AncestorType={x:Type DataGrid}}}">                                    
+                                </CheckBox>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTextColumn CanUserSort="True" Header="受试者ID" Width="100" Binding="{Binding RecordShowDto.User_id}" ></DataGridTextColumn>
+                    <DataGridTextColumn CanUserSort="True" Header="姓名" Width="100" Binding="{Binding RecordShowDto.Name}" ></DataGridTextColumn>
+                    <DataGridTextColumn CanUserSort="True" Header="性别" Width="50" Binding="{Binding RecordShowDto.Sex}"></DataGridTextColumn>
+                    <DataGridTextColumn CanUserSort="True" Header="年龄" Width="50" Binding="{Binding RecordShowDto.Age}" ></DataGridTextColumn>
+                    <DataGridTextColumn CanUserSort="True" Header="婚姻" Width="50" Binding="{Binding RecordShowDto.Marriage}"></DataGridTextColumn>
+                    <DataGridTextColumn CanUserSort="True" Header="文化程度" Width="75" Binding="{Binding RecordShowDto.Education}"></DataGridTextColumn>
+                    <DataGridTextColumn CanUserSort="True" Header="职业" Width="100" Binding="{Binding RecordShowDto.Career}"></DataGridTextColumn>
+                    <DataGridTextColumn CanUserSort="True" Header="住址" Width="100" Binding="{Binding RecordShowDto.Address}"></DataGridTextColumn>
+                    <DataGridTextColumn CanUserSort="True" Header="测评项目" Width="100" Binding="{Binding RecordShowDto.Item}"></DataGridTextColumn>
+                    <DataGridTextColumn CanUserSort="True" Header="测评日期" Width="100" Binding="{Binding RecordShowDto.InputDate}"></DataGridTextColumn>
+                    <DataGridTextColumn CanUserSort="True" Header="答题时间" Width="100" Binding="{Binding RecordShowDto.AnswerTime}" ></DataGridTextColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+            
+        </Grid>
+        <ToolBar Grid.Row="2">
+            <TextBlock Text="已选择：" VerticalAlignment="Center">
+                <TextBox IsReadOnly="True" TextAlignment="Center" Width="20" Height="18" Margin="0,1,0,0" Text="{Binding Count}"></TextBox>
+            </TextBlock>
+        </ToolBar>
+
+    </Grid>
+</Window>

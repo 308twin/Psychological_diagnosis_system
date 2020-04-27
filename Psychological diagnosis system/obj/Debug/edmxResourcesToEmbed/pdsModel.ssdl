@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="psychological_diagnosis_systemModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="8.0" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="record">
+    <Key>
+      <PropertyRef Name="GUID" />
+    </Key>
+    <Property Name="GUID" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="ID" Type="varchar" MaxLength="255" />
+    <Property Name="USER_ID" Type="varchar" MaxLength="255" />
+    <Property Name="ANSWER_ID" Type="int" />
+    <Property Name="TEST_NAME" Type="varchar" MaxLength="255" />
+    <Property Name="DATE" Type="date" />
+    <Property Name="TIME" Type="time" Precision="0" />
+  </EntityType>
+  <EntityType Name="sds_answer_card">
+    <Key>
+      <PropertyRef Name="GUID" />
+    </Key>
+    <Property Name="GUID" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="ID" Type="varchar" MaxLength="255" />
+    <Property Name="RECORD_ID" Type="varchar" MaxLength="255" />
+    <Property Name="QUES_NUM" Type="int" />
+    <Property Name="SELECT" Type="varchar" MaxLength="255" />
+    <Property Name="TENDENCY" Type="varchar" MaxLength="255" />
+    <Property Name="WEIGHT" Type="int" />
+  </EntityType>
+  <EntityType Name="self-rating_depression_scale">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="SELECT_NUM" Type="int" />
+    <Property Name="CONTENT" Type="varchar" MaxLength="255" />
+    <Property Name="TENDENCY" Type="varchar" MaxLength="255" />
+    <Property Name="SELECT_A_CONTENT" Type="varchar" MaxLength="255" />
+    <Property Name="SELECT_B_CONTENT" Type="varchar" MaxLength="255" />
+    <Property Name="SELECT_C_CONTENT" Type="varchar" MaxLength="255" />
+    <Property Name="SELECT_D_CONTENT" Type="varchar" MaxLength="255" />
+    <Property Name="A_WEIGHT" Type="double" />
+    <Property Name="B_WEIGHT" Type="double" />
+    <Property Name="C_WEIGHT" Type="double" />
+    <Property Name="D_WEIGHT" Type="double" />
+  </EntityType>
+  <EntityType Name="university_personality_inventory">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="SELECT_NUM" Type="int" />
+    <Property Name="CONTENT" Type="varchar" MaxLength="255" />
+    <Property Name="TENDENCY" Type="varchar" MaxLength="255" />
+    <Property Name="SELECT_A_CONTENT" Type="varchar" MaxLength="255" />
+    <Property Name="SELECT_B_CONTENT" Type="varchar" MaxLength="255" />
+    <Property Name="A_WEIGHT" Type="double" />
+    <Property Name="B_WEIGHT" Type="double" />
+  </EntityType>
+  <EntityType Name="upi_answer_card">
+    <Key>
+      <PropertyRef Name="GUID" />
+    </Key>
+    <Property Name="GUID" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="ID" Type="varchar" MaxLength="255" />
+    <Property Name="RECORD_ID" Type="varchar" MaxLength="255" />
+    <Property Name="QUES_NUM" Type="int" />
+    <Property Name="SELECT" Type="varchar" MaxLength="255" />
+    <Property Name="TENDENCY" Type="varchar" MaxLength="255" />
+    <Property Name="WEIGHT" Type="int" />
+  </EntityType>
+  <EntityType Name="user_info">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="USER_GUID" Type="varchar" MaxLength="255" />
+    <Property Name="ID" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="NAME" Type="varchar" MaxLength="255" />
+    <Property Name="INPUT_DATE" Type="date" />
+    <Property Name="PROVINCE" Type="varchar" MaxLength="255" />
+    <Property Name="CITY" Type="varchar" MaxLength="255" />
+    <Property Name="DISTRICT/TOWN" Type="varchar" MaxLength="255" />
+    <Property Name="DETAIL_ADDRESS" Type="varchar" MaxLength="255" />
+    <Property Name="ID_NUMBER" Type="varchar" MaxLength="255" />
+    <Property Name="SEX" Type="enum" />
+    <Property Name="MARRIAGE" Type="enum" />
+    <Property Name="AGE" Type="int" />
+    <Property Name="EDUCATION" Type="enum" />
+    <Property Name="CAREER" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="user_test">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="name" Type="varchar" MaxLength="255" />
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="age" Type="int" />
+  </EntityType>
+  <EntityContainer Name="psychological_diagnosis_systemModelStoreContainer">
+    <EntitySet Name="record" EntityType="Self.record" Schema="psychological_diagnosis_system" store:Type="Tables" />
+    <EntitySet Name="sds_answer_card" EntityType="Self.sds_answer_card" Schema="psychological_diagnosis_system" store:Type="Tables" />
+    <EntitySet Name="self-rating_depression_scale" EntityType="Self.self-rating_depression_scale" Schema="psychological_diagnosis_system" store:Type="Tables" />
+    <EntitySet Name="university_personality_inventory" EntityType="Self.university_personality_inventory" Schema="psychological_diagnosis_system" store:Type="Tables" />
+    <EntitySet Name="upi_answer_card" EntityType="Self.upi_answer_card" Schema="psychological_diagnosis_system" store:Type="Tables" />
+    <EntitySet Name="user_info" EntityType="Self.user_info" Schema="psychological_diagnosis_system" store:Type="Tables" />
+    <EntitySet Name="user_test" EntityType="Self.user_test" Schema="psychological_diagnosis_system" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

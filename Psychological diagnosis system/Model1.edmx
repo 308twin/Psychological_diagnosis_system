@@ -1,0 +1,427 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="psychological_diagnosis_systemModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="8.0" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="record">
+          <Key>
+            <PropertyRef Name="GUID" />
+          </Key>
+          <Property Name="GUID" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="ID" Type="varchar" MaxLength="255" />
+          <Property Name="USER_ID" Type="varchar" MaxLength="255" />
+          <Property Name="TEST_NAME" Type="varchar" MaxLength="255" />
+          <Property Name="DATE" Type="date" Nullable="false" />
+          <Property Name="TIME" Type="time" Precision="0" Nullable="false" />
+        </EntityType>
+        <EntityType Name="sas_answer_card">
+          <Key>
+            <PropertyRef Name="GUID" />
+          </Key>
+          <Property Name="GUID" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="RECORD_ID" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="QUES_NUM" Type="int" Nullable="false" />
+          <Property Name="SELECT" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="TENDENCY" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="WEIGHT" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="sds_answer_card">
+          <Key>
+            <PropertyRef Name="GUID" />
+          </Key>
+          <Property Name="GUID" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="RECORD_ID" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="QUES_NUM" Type="int" Nullable="false" />
+          <Property Name="SELECT" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="TENDENCY" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="WEIGHT" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="self-rating_anxiety_scale">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="SELECT_NUM" Type="int" Nullable="false" />
+          <Property Name="CONTENT" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="TENDENCY" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="SELECT_A_CONTENT" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="SELECT_B_CONTENT" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="SELECT_C_CONTENT" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="SELECT_D_CONTENT" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="A_WEIGHT" Type="int" Nullable="false" />
+          <Property Name="B_WEIGHT" Type="int" Nullable="false" />
+          <Property Name="C_WEIGHT" Type="int" Nullable="false" />
+          <Property Name="D_WEIGHT" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="self-rating_depression_scale">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="SELECT_NUM" Type="int" Nullable="false" />
+          <Property Name="CONTENT" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="TENDENCY" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="SELECT_A_CONTENT" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="SELECT_B_CONTENT" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="SELECT_C_CONTENT" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="SELECT_D_CONTENT" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="A_WEIGHT" Type="int" Nullable="false" />
+          <Property Name="B_WEIGHT" Type="int" Nullable="false" />
+          <Property Name="C_WEIGHT" Type="int" Nullable="false" />
+          <Property Name="D_WEIGHT" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="university_personality_inventory">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="SELECT_NUM" Type="int" Nullable="false" />
+          <Property Name="CONTENT" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="TENDENCY" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="SELECT_A_CONTENT" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="SELECT_B_CONTENT" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="A_WEIGHT" Type="int" Nullable="false" />
+          <Property Name="B_WEIGHT" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="upi_answer_card">
+          <Key>
+            <PropertyRef Name="GUID" />
+          </Key>
+          <Property Name="GUID" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="RECORD_ID" Type="varchar" MaxLength="255" />
+          <Property Name="QUES_NUM" Type="int" />
+          <Property Name="SELECT" Type="varchar" MaxLength="255" />
+          <Property Name="TENDENCY" Type="varchar" MaxLength="255" />
+          <Property Name="WEIGHT" Type="int" />
+        </EntityType>
+        <EntityType Name="user_info">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="USER_GUID" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="ID" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="NAME" Type="varchar" MaxLength="255" />
+          <Property Name="INPUT_DATE" Type="date" Nullable="false" />
+          <Property Name="PROVINCE" Type="varchar" MaxLength="255" />
+          <Property Name="CITY" Type="varchar" MaxLength="255" />
+          <Property Name="DISTRICT/TOWN" Type="varchar" MaxLength="255" />
+          <Property Name="DETAIL_ADDRESS" Type="varchar" MaxLength="255" />
+          <Property Name="ID_NUMBER" Type="varchar" MaxLength="255" />
+          <Property Name="SEX" Type="enum" />
+          <Property Name="MARRIAGE" Type="enum" />
+          <Property Name="AGE" Type="int" Nullable="false" />
+          <Property Name="EDUCATION" Type="enum" />
+          <Property Name="CAREER" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="user_test">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="name" Type="varchar" MaxLength="255" />
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="age" Type="int" />
+        </EntityType>
+        <EntityContainer Name="psychological_diagnosis_systemModelStoreContainer">
+          <EntitySet Name="record" EntityType="Self.record" Schema="psychological_diagnosis_system" store:Type="Tables" />
+          <EntitySet Name="sas_answer_card" EntityType="Self.sas_answer_card" Schema="psychological_diagnosis_system" store:Type="Tables" />
+          <EntitySet Name="sds_answer_card" EntityType="Self.sds_answer_card" Schema="psychological_diagnosis_system" store:Type="Tables" />
+          <EntitySet Name="self-rating_anxiety_scale" EntityType="Self.self-rating_anxiety_scale" Schema="psychological_diagnosis_system" store:Type="Tables" />
+          <EntitySet Name="self-rating_depression_scale" EntityType="Self.self-rating_depression_scale" Schema="psychological_diagnosis_system" store:Type="Tables" />
+          <EntitySet Name="university_personality_inventory" EntityType="Self.university_personality_inventory" Schema="psychological_diagnosis_system" store:Type="Tables" />
+          <EntitySet Name="upi_answer_card" EntityType="Self.upi_answer_card" Schema="psychological_diagnosis_system" store:Type="Tables" />
+          <EntitySet Name="user_info" EntityType="Self.user_info" Schema="psychological_diagnosis_system" store:Type="Tables" />
+          <EntitySet Name="user_test" EntityType="Self.user_test" Schema="psychological_diagnosis_system" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="psychological_diagnosis_systemModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="record">
+          <Key>
+            <PropertyRef Name="GUID" />
+          </Key>
+          <Property Name="GUID" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ID" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="USER_ID" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="TEST_NAME" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="DATE" Type="DateTime" Nullable="false" />
+          <Property Name="TIME" Type="Time" Nullable="false" />
+        </EntityType>
+        <EntityType Name="sas_answer_card">
+          <Key>
+            <PropertyRef Name="GUID" />
+          </Key>
+          <Property Name="GUID" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="RECORD_ID" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="QUES_NUM" Type="Int32" Nullable="false" />
+          <Property Name="SELECT" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TENDENCY" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="WEIGHT" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="sds_answer_card">
+          <Key>
+            <PropertyRef Name="GUID" />
+          </Key>
+          <Property Name="GUID" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="RECORD_ID" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="QUES_NUM" Type="Int32" Nullable="false" />
+          <Property Name="SELECT" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TENDENCY" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="WEIGHT" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="self_rating_anxiety_scale">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="SELECT_NUM" Type="Int32" Nullable="false" />
+          <Property Name="CONTENT" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TENDENCY" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SELECT_A_CONTENT" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SELECT_B_CONTENT" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SELECT_C_CONTENT" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SELECT_D_CONTENT" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="A_WEIGHT" Type="Int32" Nullable="false" />
+          <Property Name="B_WEIGHT" Type="Int32" Nullable="false" />
+          <Property Name="C_WEIGHT" Type="Int32" Nullable="false" />
+          <Property Name="D_WEIGHT" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="self_rating_depression_scale">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="SELECT_NUM" Type="Int32" Nullable="false" />
+          <Property Name="CONTENT" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TENDENCY" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SELECT_A_CONTENT" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SELECT_B_CONTENT" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SELECT_C_CONTENT" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SELECT_D_CONTENT" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="A_WEIGHT" Type="Int32" Nullable="false" />
+          <Property Name="B_WEIGHT" Type="Int32" Nullable="false" />
+          <Property Name="C_WEIGHT" Type="Int32" Nullable="false" />
+          <Property Name="D_WEIGHT" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="university_personality_inventory">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="SELECT_NUM" Type="Int32" Nullable="false" />
+          <Property Name="CONTENT" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TENDENCY" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SELECT_A_CONTENT" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SELECT_B_CONTENT" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="A_WEIGHT" Type="Int32" Nullable="false" />
+          <Property Name="B_WEIGHT" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="upi_answer_card">
+          <Key>
+            <PropertyRef Name="GUID" />
+          </Key>
+          <Property Name="GUID" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="RECORD_ID" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="QUES_NUM" Type="Int32" />
+          <Property Name="SELECT" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="TENDENCY" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="WEIGHT" Type="Int32" />
+        </EntityType>
+        <EntityType Name="user_info">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="USER_GUID" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ID" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NAME" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="INPUT_DATE" Type="DateTime" Nullable="false" />
+          <Property Name="PROVINCE" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="CITY" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="DISTRICT_TOWN" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="DETAIL_ADDRESS" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="ID_NUMBER" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="SEX" Type="String" MaxLength="65532" FixedLength="false" Unicode="false" />
+          <Property Name="MARRIAGE" Type="String" MaxLength="65532" FixedLength="false" Unicode="false" />
+          <Property Name="AGE" Type="Int32" Nullable="false" />
+          <Property Name="EDUCATION" Type="String" MaxLength="65532" FixedLength="false" Unicode="false" />
+          <Property Name="CAREER" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="user_test">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="age" Type="Int32" />
+        </EntityType>
+        <EntityContainer Name="pdsEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="record" EntityType="Self.record" />
+          <EntitySet Name="sas_answer_card" EntityType="Self.sas_answer_card" />
+          <EntitySet Name="sds_answer_card" EntityType="Self.sds_answer_card" />
+          <EntitySet Name="self_rating_anxiety_scale" EntityType="Self.self_rating_anxiety_scale" />
+          <EntitySet Name="self_rating_depression_scale" EntityType="Self.self_rating_depression_scale" />
+          <EntitySet Name="university_personality_inventory" EntityType="Self.university_personality_inventory" />
+          <EntitySet Name="upi_answer_card" EntityType="Self.upi_answer_card" />
+          <EntitySet Name="user_info" EntityType="Self.user_info" />
+          <EntitySet Name="user_test" EntityType="Self.user_test" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="psychological_diagnosis_systemModelStoreContainer" CdmEntityContainer="pdsEntities">
+          <EntitySetMapping Name="record">
+            <EntityTypeMapping TypeName="psychological_diagnosis_systemModel.record">
+              <MappingFragment StoreEntitySet="record">
+                <ScalarProperty Name="GUID" ColumnName="GUID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+                <ScalarProperty Name="TEST_NAME" ColumnName="TEST_NAME" />
+                <ScalarProperty Name="DATE" ColumnName="DATE" />
+                <ScalarProperty Name="TIME" ColumnName="TIME" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sas_answer_card">
+            <EntityTypeMapping TypeName="psychological_diagnosis_systemModel.sas_answer_card">
+              <MappingFragment StoreEntitySet="sas_answer_card">
+                <ScalarProperty Name="GUID" ColumnName="GUID" />
+                <ScalarProperty Name="RECORD_ID" ColumnName="RECORD_ID" />
+                <ScalarProperty Name="QUES_NUM" ColumnName="QUES_NUM" />
+                <ScalarProperty Name="SELECT" ColumnName="SELECT" />
+                <ScalarProperty Name="TENDENCY" ColumnName="TENDENCY" />
+                <ScalarProperty Name="WEIGHT" ColumnName="WEIGHT" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sds_answer_card">
+            <EntityTypeMapping TypeName="psychological_diagnosis_systemModel.sds_answer_card">
+              <MappingFragment StoreEntitySet="sds_answer_card">
+                <ScalarProperty Name="GUID" ColumnName="GUID" />
+                <ScalarProperty Name="RECORD_ID" ColumnName="RECORD_ID" />
+                <ScalarProperty Name="QUES_NUM" ColumnName="QUES_NUM" />
+                <ScalarProperty Name="SELECT" ColumnName="SELECT" />
+                <ScalarProperty Name="TENDENCY" ColumnName="TENDENCY" />
+                <ScalarProperty Name="WEIGHT" ColumnName="WEIGHT" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="self_rating_anxiety_scale">
+            <EntityTypeMapping TypeName="psychological_diagnosis_systemModel.self_rating_anxiety_scale">
+              <MappingFragment StoreEntitySet="self-rating_anxiety_scale">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="SELECT_NUM" ColumnName="SELECT_NUM" />
+                <ScalarProperty Name="CONTENT" ColumnName="CONTENT" />
+                <ScalarProperty Name="TENDENCY" ColumnName="TENDENCY" />
+                <ScalarProperty Name="SELECT_A_CONTENT" ColumnName="SELECT_A_CONTENT" />
+                <ScalarProperty Name="SELECT_B_CONTENT" ColumnName="SELECT_B_CONTENT" />
+                <ScalarProperty Name="SELECT_C_CONTENT" ColumnName="SELECT_C_CONTENT" />
+                <ScalarProperty Name="SELECT_D_CONTENT" ColumnName="SELECT_D_CONTENT" />
+                <ScalarProperty Name="A_WEIGHT" ColumnName="A_WEIGHT" />
+                <ScalarProperty Name="B_WEIGHT" ColumnName="B_WEIGHT" />
+                <ScalarProperty Name="C_WEIGHT" ColumnName="C_WEIGHT" />
+                <ScalarProperty Name="D_WEIGHT" ColumnName="D_WEIGHT" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="self_rating_depression_scale">
+            <EntityTypeMapping TypeName="psychological_diagnosis_systemModel.self_rating_depression_scale">
+              <MappingFragment StoreEntitySet="self-rating_depression_scale">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="SELECT_NUM" ColumnName="SELECT_NUM" />
+                <ScalarProperty Name="CONTENT" ColumnName="CONTENT" />
+                <ScalarProperty Name="TENDENCY" ColumnName="TENDENCY" />
+                <ScalarProperty Name="SELECT_A_CONTENT" ColumnName="SELECT_A_CONTENT" />
+                <ScalarProperty Name="SELECT_B_CONTENT" ColumnName="SELECT_B_CONTENT" />
+                <ScalarProperty Name="SELECT_C_CONTENT" ColumnName="SELECT_C_CONTENT" />
+                <ScalarProperty Name="SELECT_D_CONTENT" ColumnName="SELECT_D_CONTENT" />
+                <ScalarProperty Name="A_WEIGHT" ColumnName="A_WEIGHT" />
+                <ScalarProperty Name="B_WEIGHT" ColumnName="B_WEIGHT" />
+                <ScalarProperty Name="C_WEIGHT" ColumnName="C_WEIGHT" />
+                <ScalarProperty Name="D_WEIGHT" ColumnName="D_WEIGHT" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="university_personality_inventory">
+            <EntityTypeMapping TypeName="psychological_diagnosis_systemModel.university_personality_inventory">
+              <MappingFragment StoreEntitySet="university_personality_inventory">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="SELECT_NUM" ColumnName="SELECT_NUM" />
+                <ScalarProperty Name="CONTENT" ColumnName="CONTENT" />
+                <ScalarProperty Name="TENDENCY" ColumnName="TENDENCY" />
+                <ScalarProperty Name="SELECT_A_CONTENT" ColumnName="SELECT_A_CONTENT" />
+                <ScalarProperty Name="SELECT_B_CONTENT" ColumnName="SELECT_B_CONTENT" />
+                <ScalarProperty Name="A_WEIGHT" ColumnName="A_WEIGHT" />
+                <ScalarProperty Name="B_WEIGHT" ColumnName="B_WEIGHT" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="upi_answer_card">
+            <EntityTypeMapping TypeName="psychological_diagnosis_systemModel.upi_answer_card">
+              <MappingFragment StoreEntitySet="upi_answer_card">
+                <ScalarProperty Name="GUID" ColumnName="GUID" />
+                <ScalarProperty Name="RECORD_ID" ColumnName="RECORD_ID" />
+                <ScalarProperty Name="QUES_NUM" ColumnName="QUES_NUM" />
+                <ScalarProperty Name="SELECT" ColumnName="SELECT" />
+                <ScalarProperty Name="TENDENCY" ColumnName="TENDENCY" />
+                <ScalarProperty Name="WEIGHT" ColumnName="WEIGHT" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="user_info">
+            <EntityTypeMapping TypeName="psychological_diagnosis_systemModel.user_info">
+              <MappingFragment StoreEntitySet="user_info">
+                <ScalarProperty Name="USER_GUID" ColumnName="USER_GUID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="NAME" ColumnName="NAME" />
+                <ScalarProperty Name="INPUT_DATE" ColumnName="INPUT_DATE" />
+                <ScalarProperty Name="PROVINCE" ColumnName="PROVINCE" />
+                <ScalarProperty Name="CITY" ColumnName="CITY" />
+                <ScalarProperty Name="DISTRICT_TOWN" ColumnName="DISTRICT/TOWN" />
+                <ScalarProperty Name="DETAIL_ADDRESS" ColumnName="DETAIL_ADDRESS" />
+                <ScalarProperty Name="ID_NUMBER" ColumnName="ID_NUMBER" />
+                <ScalarProperty Name="SEX" ColumnName="SEX" />
+                <ScalarProperty Name="MARRIAGE" ColumnName="MARRIAGE" />
+                <ScalarProperty Name="AGE" ColumnName="AGE" />
+                <ScalarProperty Name="EDUCATION" ColumnName="EDUCATION" />
+                <ScalarProperty Name="CAREER" ColumnName="CAREER" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="user_test">
+            <EntityTypeMapping TypeName="psychological_diagnosis_systemModel.user_test">
+              <MappingFragment StoreEntitySet="user_test">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="age" ColumnName="age" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="无" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
