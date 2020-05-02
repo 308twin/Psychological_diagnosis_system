@@ -1,0 +1,38 @@
+﻿<Page x:Class="Psychological_diagnosis_system.Views.Pages.UserAnswerPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Psychological_diagnosis_system.Views.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="UserAnswerPage">
+    <Page.Resources>
+        <DataTemplate x:Key="questionItemTemplate">
+            <StackPanel Orientation="Vertical" Width="auto">
+                <TextBlock Text="{Binding CONTENT}" HorizontalAlignment="Left"  Margin="2,0,0,2" />
+                <RadioButton GroupName="{Binding ID}" Content="{Binding SELECT_A_CONTENT}" Margin="20,0,0,0"/>
+                <RadioButton GroupName="{Binding ID}" Content="{Binding SELECT_B_CONTENT}" Margin="20,0,0,0"/>
+            </StackPanel>
+        </DataTemplate>
+
+    </Page.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+
+        </Grid.ColumnDefinitions>
+        <Grid>
+            <ScrollViewer>
+
+                <StackPanel>
+
+                    <ListBox x:Name="listbox"  ItemTemplate="{StaticResource questionItemTemplate}" ItemsSource="{Binding Self_Rating_Depression_Scale}" Grid.ColumnSpan="2" ></ListBox>
+                    <Button Width="50" Height="50">test</Button>
+                </StackPanel>
+
+
+            </ScrollViewer>
+
+        </Grid>
+    </Grid>
+</Page>

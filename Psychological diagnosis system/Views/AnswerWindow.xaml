@@ -1,0 +1,13 @@
+﻿<Window x:Class="Psychological_diagnosis_system.Views.AnswerWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Psychological_diagnosis_system.Views"
+        mc:Ignorable="d"
+        Title="AnswerWindow" Height="600" Width="800" WindowStartupLocation="CenterOwner">
+    <Grid>
+        <Frame x:Name="SelectScalePage"  Source="/Psychological diagnosis system;component/Views/Pages/SelectScalePage.xaml" NavigationUIVisibility="Hidden"></Frame>
+        
+    </Grid>
+</Window>

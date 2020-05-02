@@ -74,6 +74,34 @@ namespace Psychological_diagnosis_system.Services
             }
             return userShowDtos;
         }
-            
+          
+        public List<ScaleInfoShowDto> GetScaleInfoShowDtos()
+        {
+            List<scale_info> scale_Infos = new List<scale_info>();
+            List<ScaleInfoShowDto> scaleInfoShowDtos = new List<ScaleInfoShowDto>();
+            scale_Infos = _pdsEntity.scale_info.ToList();
+
+            foreach(var scale_info in scale_Infos)
+            {
+                ScaleInfoShowDto scaleInfoShowDto = new ScaleInfoShowDto();
+                scaleInfoShowDto.Name = scale_info.NAME;
+                scaleInfoShowDto.QuesNum = scale_info.QUES_NUM;
+                scaleInfoShowDto.SelectNum = scale_info.SELECT_NUM;
+
+                scaleInfoShowDtos.Add(scaleInfoShowDto);
+            }
+            return scaleInfoShowDtos;
+
+        }
+        
+        public List<self_rating_anxiety_scale> GetSelf_Rating_Anxiety_Scales()
+        {
+            return _pdsEntity.self_rating_anxiety_scale.ToList();
+        }
+
+        public List<self_rating_depression_scale> GetSelf_Rating_Depression_Scales()
+        {
+            return _pdsEntity.self_rating_depression_scale.ToList();
+        }
     }
 }

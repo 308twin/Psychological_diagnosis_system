@@ -62,11 +62,10 @@ namespace Psychological_diagnosis_system
 
         private void Start_Answer_Click(object sender, RoutedEventArgs e)
         {
-
-            List<RecordShowDto> recordShowDtos = dataService.GetRecordShowDtos();
-            Console.WriteLine(recordShowDtos[0].Name);
-            //pdsEntities pds = new pdsEntities();
-            //Console.WriteLine(pds.record.FirstOrDefault().GUID);
+            AnswerWindow answerWindow = new AnswerWindow();
+            answerWindow.Owner = this;
+            answerWindow.ShowDialog();
+           
         }
 
         private void quit_Click(object sender, RoutedEventArgs e)
@@ -90,6 +89,23 @@ namespace Psychological_diagnosis_system
             searchWindow.Owner = this;
             searchWindow.WindowStartupLocation = System.Windows.WindowStartupLocation.CenterOwner;
             searchWindow.ShowDialog();
+        }
+
+        private void analytics_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                this.IsEnabled = false;
+                PrintDialog printDialog = new PrintDialog();
+                if (printDialog.ShowDialog() == true)
+                {
+                    printDialog.PrintVisual(print, "invoice");
+                }
+            }
+            finally
+            {
+                this.IsEnabled = true;
+            }
         }
     }
 }

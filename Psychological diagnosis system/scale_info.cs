@@ -12,10 +12,12 @@ namespace Psychological_diagnosis_system
     using System;
     using System.Collections.Generic;
     
-    public partial class user_test
+    public partial class scale_info
     {
-        public string name { get; set; }
-        public int id { get; set; }
-        public Nullable<int> age { get; set; }
+        public string ID { get; set; }
+        public int QUES_NUM { get; set; }
+        public string NAME { get; set; }
+        public string DB_NAME { get; set; }
+        public int SELECT_NUM { get; set; }
     }
 }

@@ -1,0 +1,38 @@
+﻿<Page x:Class="Psychological_diagnosis_system.Views.ScalePages.SASPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Psychological_diagnosis_system.Views.ScalePages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="SASPage">
+
+    <Page.Resources>
+        <DataTemplate x:Key="questionItemTemplate">
+            <StackPanel Orientation="Vertical" Width="auto">
+                <TextBlock Text="{Binding CONTENT}" HorizontalAlignment="Left"  Margin="2,0,0,2" />
+                <RadioButton x:Name="Button_A" GroupName="{Binding ID}" Content="{Binding SELECT_A_CONTENT}" Checked="RadioButton_Checked" Margin="20,0,0,0"/>
+                <RadioButton x:Name="Button_B" GroupName="{Binding ID}" Content="{Binding SELECT_B_CONTENT}" Checked="RadioButton_Checked" Margin="20,0,0,0"/>
+                <RadioButton x:Name="Button_C" GroupName="{Binding ID}" Content="{Binding SELECT_C_CONTENT}" Checked="RadioButton_Checked" Margin="20,0,0,0"/>
+                <RadioButton x:Name="Button_D" GroupName="{Binding ID}" Content="{Binding SELECT_D_CONTENT}" Checked="RadioButton_Checked" Margin="20,0,0,0"/>
+            </StackPanel>
+        </DataTemplate>
+
+    </Page.Resources>
+    <Grid>
+        <ScrollViewer>
+
+            <StackPanel>
+
+                <ListBox x:Name="listbox"  ItemTemplate="{StaticResource questionItemTemplate}" ItemsSource="{Binding Scale}" Grid.ColumnSpan="2" ></ListBox>
+                <Grid>
+                    <Button x:Name="Ensure_Button" Width="60" Height="40" Margin="0,0,200,0" Click="Ensure_Button_Click">确定</Button>
+                    <Button x:Name="Close_Button" Width="60" Height="40" Margin="200,0,0,0" Click="Close_Button_Click">取消</Button>
+                </Grid>
+            </StackPanel>
+
+
+        </ScrollViewer>
+    </Grid>
+</Page>

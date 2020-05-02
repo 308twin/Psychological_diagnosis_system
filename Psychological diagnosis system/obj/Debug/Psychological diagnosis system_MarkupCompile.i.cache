@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 D:\Psychological diagnosis system\Psychological diagnosis system\App.xaml
-6-2050165858
+12-1829800121
 21750853300
-56-1767264057
-173-2082326968
-ViewModels\BorderlessWindow.xaml;Views\AreaSelect.xaml;MainWindow.xaml;UserControls\DistrictControl.xaml;Views\SearchWindow.xaml;Views\UserWindow.xaml;
+76-2088023294
+174-112205949
+ViewModels\BorderlessWindow.xaml;Views\AnswerWindow.xaml;Views\AreaSelect.xaml;MainWindow.xaml;UserControls\DistrictControl.xaml;Views\Pages\SelectAnswerPage.xaml;Views\Pages\SelectScalePage.xaml;Views\Pages\UserAnswerPage.xaml;Views\ScalePages\SASPage.xaml;Views\ScalePages\SDSPage.xaml;Views\SearchWindow.xaml;Views\UserWindow.xaml;
 
-False
+True
 

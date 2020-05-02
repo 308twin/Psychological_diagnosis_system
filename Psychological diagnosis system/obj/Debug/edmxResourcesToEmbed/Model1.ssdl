@@ -22,6 +22,22 @@
     <Property Name="TENDENCY" Type="varchar" MaxLength="255" Nullable="false" />
     <Property Name="WEIGHT" Type="int" Nullable="false" />
   </EntityType>
+  <!--生成过程中发现错误:
+警告 6002: 表/视图“def.psychological_diagnosis_system.scale_info”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+  <EntityType Name="scale_info">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="QUES_NUM" />
+      <PropertyRef Name="NAME" />
+      <PropertyRef Name="DB_NAME" />
+      <PropertyRef Name="SELECT_NUM" />
+    </Key>
+    <Property Name="ID" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="QUES_NUM" Type="int" Nullable="false" />
+    <Property Name="NAME" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="DB_NAME" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="SELECT_NUM" Type="int" Nullable="false" />
+  </EntityType>
   <EntityType Name="sds_answer_card">
     <Key>
       <PropertyRef Name="GUID" />
@@ -110,14 +126,6 @@
     <Property Name="EDUCATION" Type="enum" />
     <Property Name="CAREER" Type="varchar" MaxLength="255" />
   </EntityType>
-  <EntityType Name="user_test">
-    <Key>
-      <PropertyRef Name="id" />
-    </Key>
-    <Property Name="name" Type="varchar" MaxLength="255" />
-    <Property Name="id" Type="int" Nullable="false" />
-    <Property Name="age" Type="int" />
-  </EntityType>
   <EntityContainer Name="psychological_diagnosis_systemModelStoreContainer">
     <EntitySet Name="record" EntityType="Self.record" Schema="psychological_diagnosis_system" store:Type="Tables" />
     <EntitySet Name="sas_answer_card" EntityType="Self.sas_answer_card" Schema="psychological_diagnosis_system" store:Type="Tables" />
@@ -127,6 +135,14 @@
     <EntitySet Name="university_personality_inventory" EntityType="Self.university_personality_inventory" Schema="psychological_diagnosis_system" store:Type="Tables" />
     <EntitySet Name="upi_answer_card" EntityType="Self.upi_answer_card" Schema="psychological_diagnosis_system" store:Type="Tables" />
     <EntitySet Name="user_info" EntityType="Self.user_info" Schema="psychological_diagnosis_system" store:Type="Tables" />
-    <EntitySet Name="user_test" EntityType="Self.user_test" Schema="psychological_diagnosis_system" store:Type="Tables" />
+    <EntitySet Name="scale_info" EntityType="Self.scale_info" store:Type="Tables" store:Schema="psychological_diagnosis_system">
+      <DefiningQuery>SELECT
+`scale_info`.`ID`, 
+`scale_info`.`QUES_NUM`, 
+`scale_info`.`NAME`, 
+`scale_info`.`DB_NAME`, 
+`scale_info`.`SELECT_NUM`
+FROM `scale_info` AS `scale_info`</DefiningQuery>
+    </EntitySet>
   </EntityContainer>
 </Schema>

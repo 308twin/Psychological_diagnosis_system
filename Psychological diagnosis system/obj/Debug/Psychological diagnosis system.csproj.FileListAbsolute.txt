@@ -117,3 +117,16 @@ D:\Psychological diagnosis system\Psychological diagnosis system\obj\Debug\Views
 D:\Psychological diagnosis system\Psychological diagnosis system\obj\Debug\Views\SearchWindow.g.cs
 D:\Psychological diagnosis system\Psychological diagnosis system\obj\Debug\Views\SearchWindow.baml
 D:\Psychological diagnosis system\Psychological diagnosis system\obj\Debug\ViewModels\BorderlessWindow.baml
+D:\Psychological diagnosis system\Psychological diagnosis system\bin\Debug\Panuon.UI.Silver.dll
+D:\Psychological diagnosis system\Psychological diagnosis system\obj\Debug\Views\AnswerWindow.g.cs
+D:\Psychological diagnosis system\Psychological diagnosis system\obj\Debug\Views\Pages\SelectScalePage.g.cs
+D:\Psychological diagnosis system\Psychological diagnosis system\obj\Debug\Views\AnswerWindow.baml
+D:\Psychological diagnosis system\Psychological diagnosis system\obj\Debug\Views\Pages\SelectScalePage.baml
+D:\Psychological diagnosis system\Psychological diagnosis system\obj\Debug\Views\Pages\SelectAnswerPage.g.cs
+D:\Psychological diagnosis system\Psychological diagnosis system\obj\Debug\Views\Pages\SelectAnswerPage.baml
+D:\Psychological diagnosis system\Psychological diagnosis system\obj\Debug\Views\Pages\UserAnswerPage.g.cs
+D:\Psychological diagnosis system\Psychological diagnosis system\obj\Debug\Views\Pages\UserAnswerPage.baml
+D:\Psychological diagnosis system\Psychological diagnosis system\obj\Debug\Views\ScalePages\SDSPage.g.cs
+D:\Psychological diagnosis system\Psychological diagnosis system\obj\Debug\Views\ScalePages\SDSPage.baml
+D:\Psychological diagnosis system\Psychological diagnosis system\obj\Debug\Views\ScalePages\SASPage.g.cs
+D:\Psychological diagnosis system\Psychological diagnosis system\obj\Debug\Views\ScalePages\SASPage.baml

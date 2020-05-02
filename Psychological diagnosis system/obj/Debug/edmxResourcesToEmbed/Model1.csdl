@@ -110,13 +110,19 @@
     <Property Name="EDUCATION" Type="String" MaxLength="65532" FixedLength="false" Unicode="false" />
     <Property Name="CAREER" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
   </EntityType>
-  <EntityType Name="user_test">
+  <EntityType Name="scale_info">
     <Key>
-      <PropertyRef Name="id" />
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="QUES_NUM" />
+      <PropertyRef Name="NAME" />
+      <PropertyRef Name="DB_NAME" />
+      <PropertyRef Name="SELECT_NUM" />
     </Key>
-    <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Name="id" Type="Int32" Nullable="false" />
-    <Property Name="age" Type="Int32" />
+    <Property Name="ID" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="QUES_NUM" Type="Int32" Nullable="false" />
+    <Property Name="NAME" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DB_NAME" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SELECT_NUM" Type="Int32" Nullable="false" />
   </EntityType>
   <EntityContainer Name="pdsEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="record" EntityType="Self.record" />
@@ -127,6 +133,6 @@
     <EntitySet Name="university_personality_inventory" EntityType="Self.university_personality_inventory" />
     <EntitySet Name="upi_answer_card" EntityType="Self.upi_answer_card" />
     <EntitySet Name="user_info" EntityType="Self.user_info" />
-    <EntitySet Name="user_test" EntityType="Self.user_test" />
+    <EntitySet Name="scale_info" EntityType="Self.scale_info" />
   </EntityContainer>
 </Schema>

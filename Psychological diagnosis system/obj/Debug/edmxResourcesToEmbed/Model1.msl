@@ -119,12 +119,14 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="user_test">
-      <EntityTypeMapping TypeName="psychological_diagnosis_systemModel.user_test">
-        <MappingFragment StoreEntitySet="user_test">
-          <ScalarProperty Name="name" ColumnName="name" />
-          <ScalarProperty Name="id" ColumnName="id" />
-          <ScalarProperty Name="age" ColumnName="age" />
+    <EntitySetMapping Name="scale_info">
+      <EntityTypeMapping TypeName="psychological_diagnosis_systemModel.scale_info">
+        <MappingFragment StoreEntitySet="scale_info">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="QUES_NUM" ColumnName="QUES_NUM" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="DB_NAME" ColumnName="DB_NAME" />
+          <ScalarProperty Name="SELECT_NUM" ColumnName="SELECT_NUM" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

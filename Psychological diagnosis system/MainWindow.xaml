@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Psychological_diagnosis_system"
         mc:Ignorable="d"
-        Title="心理测评系统" Height="450" Width="1400" WindowStartupLocation="CenterScreen"  ResizeMode="CanResizeWithGrip">
+        Title="心理测评系统" Height="900" Width="1400" WindowStartupLocation="CenterScreen"  ResizeMode="CanResizeWithGrip">
     
-    <Grid ShowGridLines="False">
+    <Grid ShowGridLines="False" x:Name="print">
         <Grid.RowDefinitions>
             <RowDefinition Height="80"></RowDefinition>
             <RowDefinition></RowDefinition>
@@ -105,7 +105,7 @@
                                 </TextBlock>
                             </StackPanel>
                         </Button>
-                        <Button x:Name="analytics" ToolTip="分析报告" Width="64">
+                        <Button x:Name="analytics" ToolTip="分析报告" Width="64" Click="analytics_Click">
                             <StackPanel>
                                 <Image Source="./Image/analytics.png" Width="40" Height="40"></Image>
                                 <TextBlock HorizontalAlignment="Stretch" TextAlignment="Center">

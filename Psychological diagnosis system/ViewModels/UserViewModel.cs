@@ -1,16 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Prism.Commands;
 using Prism.Mvvm;
-using Psychological_diagnosis_system.Entities;
 using Psychological_diagnosis_system.Services;
 using Psychological_diagnosis_system.Models;
 using Psychological_diagnosis_system.DtoParameters;
-using System.Windows;
-using Psychological_diagnosis_system.Views;
 using System.Collections.ObjectModel;
 
 namespace Psychological_diagnosis_system.ViewModels
@@ -117,13 +112,13 @@ namespace Psychological_diagnosis_system.ViewModels
 
                 Console.WriteLine(UserObserv.Count() + " " + UserList.Count());
                 this.UserList = this.UserList.Where(x =>
-               //(x.UserShowDto.User_id.Contains(ViewModelInfo.userShowDtoParameter.id) || string.IsNullOrEmpty(ViewModelInfo.userShowDtoParameter.id))
-               //&& (x.UserShowDto.Name.Contains(ViewModelInfo.userShowDtoParameter.name) || string.IsNullOrEmpty(ViewModelInfo.userShowDtoParameter.name))
-                (x.UserShowDto.IdNumber.Contains(ViewModelInfo.userShowDtoParameter.idNumber) || string.IsNullOrEmpty(ViewModelInfo.userShowDtoParameter.idNumber))
+               (x.UserShowDto.User_id.Contains(ViewModelInfo.userShowDtoParameter.id) || string.IsNullOrEmpty(ViewModelInfo.userShowDtoParameter.id))
+               && (x.UserShowDto.Name.Contains(ViewModelInfo.userShowDtoParameter.name) || string.IsNullOrEmpty(ViewModelInfo.userShowDtoParameter.name))
+               && (x.UserShowDto.IdNumber.Contains(ViewModelInfo.userShowDtoParameter.idNumber) || string.IsNullOrEmpty(ViewModelInfo.userShowDtoParameter.idNumber))
                && (x.UserShowDto.Sex.Contains(ViewModelInfo.userShowDtoParameter.sex) || string.IsNullOrEmpty(ViewModelInfo.userShowDtoParameter.sex))
-               //&& (x.UserShowDto.Age.Equals(ViewModelInfo.userShowDtoParameter.age) || ViewModelInfo.userShowDtoParameter.age == 0)
-               //&& (x.UserShowDto.Education.Contains(ViewModelInfo.userShowDtoParameter.education) || string.IsNullOrEmpty(ViewModelInfo.userShowDtoParameter.education))
-               //&& (x.UserShowDto.Marriage.Contains(ViewModelInfo.userShowDtoParameter.marriage) || string.IsNullOrEmpty(ViewModelInfo.userShowDtoParameter.marriage))
+               && (x.UserShowDto.Age.Equals(ViewModelInfo.userShowDtoParameter.age) || ViewModelInfo.userShowDtoParameter.age == 0)
+               && (x.UserShowDto.Education.Contains(ViewModelInfo.userShowDtoParameter.education) || string.IsNullOrEmpty(ViewModelInfo.userShowDtoParameter.education))
+               && (x.UserShowDto.Marriage.Contains(ViewModelInfo.userShowDtoParameter.marriage) || string.IsNullOrEmpty(ViewModelInfo.userShowDtoParameter.marriage))
                     ).ToList();
                 this.UserObserv = new ObservableCollection<UserGridViewModel>(UserList);
             }

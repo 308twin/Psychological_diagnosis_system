@@ -11,5 +11,6 @@ namespace Psychological_diagnosis_system.Services
     {
         //List<User> GetUsers();
         List<RecordShowDto> GetRecordShowDtos();
+        List<UserShowDto> GetUserShowDtos();
     }
 }

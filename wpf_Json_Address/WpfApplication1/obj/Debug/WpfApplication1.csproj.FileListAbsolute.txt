@@ -37,7 +37,6 @@ D:\Psychological diagnosis system\wpf_Json_Address\WpfApplication1\bin\Debug\Wpf
 D:\Psychological diagnosis system\wpf_Json_Address\WpfApplication1\bin\Debug\WpfApplication1.exe
 D:\Psychological diagnosis system\wpf_Json_Address\WpfApplication1\bin\Debug\WpfApplication1.pdb
 D:\Psychological diagnosis system\wpf_Json_Address\WpfApplication1\bin\Debug\Newtonsoft.Json.dll
-D:\Psychological diagnosis system\wpf_Json_Address\WpfApplication1\obj\Debug\WpfApplication1.csprojAssemblyReference.cache
 D:\Psychological diagnosis system\wpf_Json_Address\WpfApplication1\obj\Debug\MainWindow.g.cs
 D:\Psychological diagnosis system\wpf_Json_Address\WpfApplication1\obj\Debug\UserControls\DictrictControl.g.cs
 D:\Psychological diagnosis system\wpf_Json_Address\WpfApplication1\obj\Debug\App.g.cs

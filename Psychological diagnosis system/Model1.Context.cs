@@ -33,6 +33,6 @@ namespace Psychological_diagnosis_system
         public virtual DbSet<university_personality_inventory> university_personality_inventory { get; set; }
         public virtual DbSet<upi_answer_card> upi_answer_card { get; set; }
         public virtual DbSet<user_info> user_info { get; set; }
-        public virtual DbSet<user_test> user_test { get; set; }
+        public virtual DbSet<scale_info> scale_info { get; set; }
     }
 }
