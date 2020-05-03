@@ -135,13 +135,16 @@
             <WrapPanel Grid.Row="5" Grid.ColumnSpan="2">
                 <UserControls:DistrictControl Height="40" Width="360"/>
             </WrapPanel>
-            <Button x:Name="Search" Grid.Row="6" Grid.Column="0" Height="30" Width="50" HorizontalAlignment="Center" Click="Ensure_Click" Command="{Binding SearchUserCommand}">
+            <Button x:Name="Search" Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2" Margin="10,0,0,0" Height="30" Width="50" Click="Ensure_Click" Command="{Binding SearchUserCommand}" HorizontalAlignment="Left">
                 查找
             </Button>
-            <Button x:Name="Delete" Grid.Row="6" Grid.ColumnSpan="2" Height="30" Width="50" HorizontalAlignment="Center" Click="Delete_Click">
+            <Button x:Name="Add" Grid.Row="6" Grid.Column="0" Height="30" Width="50" Margin="120,0,0,0" Click="Ensure_Click" Command="{Binding AddUserCommand}" HorizontalAlignment="Left">
+                新增
+            </Button>
+            <Button x:Name="Delete" Grid.Row="6" Grid.ColumnSpan="2" Height="30" Margin="230,0,0,0" Width="50" HorizontalAlignment="Left" Command="{Binding DeleteUserCommand}" Click="Delete_Click">
                 删除
             </Button>
-            <Button x:Name="Close" Click="Close_Click" Grid.Row="6" Grid.Column="1" Height="30" Width="50" HorizontalAlignment="Center">
+            <Button x:Name="Close" Click="Close_Click" Grid.Row="6"  Grid.ColumnSpan="2" Margin="340,0,0,0" Height="30" Width="50" HorizontalAlignment="Left">
                 退出
             </Button>
         </Grid>

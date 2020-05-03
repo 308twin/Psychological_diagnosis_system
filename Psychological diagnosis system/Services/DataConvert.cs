@@ -49,10 +49,19 @@ namespace Psychological_diagnosis_system.Services
             switch (DbName)
             {
                 case "self-rating_depression_scale":
-                    return "抑郁自评量表";
+                    return "SDS抑郁自评量表";
                 case "self-rating_anxiety_scale":
-                    return "焦虑自评量表";
+                    return "SAS焦虑自评量表";
 
+            }
+            return null;
+        }
+        public static string ScaleNameToAnalysisPageName(string scaleName)
+        {
+            switch(scaleName)
+            {
+                case "SAS焦虑自评量表":
+                    return "SASAnalysisPage.xaml";
             }
             return null;
         }

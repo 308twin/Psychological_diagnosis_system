@@ -7,6 +7,9 @@ using Psychological_diagnosis_system.Services;
 using Psychological_diagnosis_system.Models;
 using Psychological_diagnosis_system.DtoParameters;
 using System.Collections.ObjectModel;
+using Psychological_diagnosis_system.Views;
+using Psychological_diagnosis_system.Repositories;
+using System.Windows;
 
 namespace Psychological_diagnosis_system.ViewModels
 {
@@ -19,7 +22,10 @@ namespace Psychological_diagnosis_system.ViewModels
         DataService dataService = new DataService(pds);
         public DelegateCommand SelectRecordCommand { get; set; }
         public DelegateCommand DeleteRecordCommand { get; set; }
+        public DelegateCommand DeleteUserCommand { get; set; }
         public DelegateCommand SearchUserCommand { get; set; }
+        public DelegateCommand AddUserCommand { get; set; }
+
 
         private UserShowDtoParameter userShowDtoParameter;
         private List<UserGridViewModel> userList;
@@ -62,7 +68,9 @@ namespace Psychological_diagnosis_system.ViewModels
         public UserViewModel()
         {
             LoadUserShowDto();
-            this.SearchUserCommand = new DelegateCommand(new Action(SearchUser));
+            SearchUserCommand = new DelegateCommand(new Action(SearchUser));
+            AddUserCommand = new DelegateCommand(new Action(AddUser));
+            DeleteUserCommand = new DelegateCommand(new Action(DeleteUser));
         }
         #endregion
 
@@ -80,6 +88,7 @@ namespace Psychological_diagnosis_system.ViewModels
             }
             UserList = new List<UserGridViewModel>(UserObserv);
         }
+        //读取List，之后要转换为OberservCollection，不必关心内部实现
         private void LoadUserList()
         {
             List<UserShowDto> userShowDtos = dataService.GetUserShowDtos();
@@ -133,6 +142,27 @@ namespace Psychological_diagnosis_system.ViewModels
                 marriage = ""
             };
             Console.WriteLine(UserObserv.Count()+" "+UserList.Count());
+        }
+
+        private void AddUser()
+        {
+            AddUserWindows addUserWindows = new AddUserWindows();
+            addUserWindows.ShowDialog();
+            LoadUserShowDto();
+        }
+        private void DeleteUser()
+        {
+            foreach(var user in UserObserv)
+            {
+                if (user.IsSelected == true)
+                {
+                    UserRepository userRepository = new UserRepository();
+                    userRepository.DeleteUser(user.UserShowDto.User_id);
+                }
+                   
+            }
+            LoadUserShowDto();
+            MessageBox.Show("用户删除完毕！主窗口请重新查询记录");
         }
         #endregion
 

@@ -87,5 +87,6 @@ namespace Psychological_diagnosis_system.Views
         {
             this.Close();
         }
+
     }
 }

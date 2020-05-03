@@ -130,5 +130,24 @@ namespace Psychological_diagnosis_system.Repositories
             }
             return 0;
         }
+
+        public void DeleteUserAllRecord(string userID)
+        {
+            pdsEntities pds = new pdsEntities();
+            var record = pds.record.FirstOrDefault(x => x.USER_ID == userID);
+            //先删除答题卡，然后删除答题记录
+            if(record.TEST_NAME== "SAS焦虑自评量表")
+            {
+                var answer = pds.sas_answer_card.Where(x => x.RECORD_ID == record.ID);
+                foreach(var i in answer)
+                {
+                    pds.sas_answer_card.Remove(i);
+                }
+            }
+            pds.record.Remove(record);
+            pds.SaveChanges();
+        }
+
+       
     }
 }

@@ -253,6 +253,7 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Repositories\RecordRepository.cs" />
+    <Compile Include="Repositories\UserRepository.cs" />
     <Compile Include="sas_answer_card.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -269,6 +270,7 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Services\DataConvert.cs" />
+    <Compile Include="Services\TimeConverter.cs" />
     <Compile Include="university_personality_inventory.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -278,6 +280,7 @@
     <Compile Include="user_info.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="ViewModels\AddUserViewModel.cs" />
     <Compile Include="ViewModels\AnswerViewModel.cs" />
     <Compile Include="ViewModels\ScalePageViewModels\SASViewModel.cs" />
     <Compile Include="ViewModels\ScalePageViewModels\SDSViewModel.cs" />
@@ -289,6 +292,15 @@
     <Compile Include="ViewModels\UserGridViewModel.cs" />
     <Compile Include="ViewModels\UserViewModel.cs" />
     <Compile Include="ViewModels\ViewModelInfo.cs" />
+    <Compile Include="Views\AddUserWindows.xaml.cs">
+      <DependentUpon>AddUserWindows.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AnalysisPages\SASAnalysisPage.xaml.cs">
+      <DependentUpon>SASAnalysisPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AnalysisWindows.xaml.cs">
+      <DependentUpon>AnalysisWindows.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\AnswerWindow.xaml.cs">
       <DependentUpon>AnswerWindow.xaml</DependentUpon>
     </Compile>
@@ -346,6 +358,18 @@
     <Compile Include="ViewModels\MainWindowViewModel.cs" />
     <Compile Include="ViewModels\RecordViewModel.cs" />
     <Page Include="ViewModels\BorderlessWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AddUserWindows.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AnalysisPages\SASAnalysisPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AnalysisWindows.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -456,6 +480,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Data\" />
+    <Folder Include="ViewModels\AnalysisViewModels\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
@@ -475,6 +500,8 @@
     <Resource Include="Image\delete_user.png" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Views\print.png" />
+    <Resource Include="Image\print.png" />
     <Content Include="Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model1.edmx</DependentUpon>

@@ -21,6 +21,8 @@ using Psychological_diagnosis_system.Services;
 using Psychological_diagnosis_system.Repositories;
 using Psychological_diagnosis_system.ViewModels;
 using Psychological_diagnosis_system.Views;
+using System.Globalization;
+
 namespace Psychological_diagnosis_system
 {
     /// <summary>
@@ -35,10 +37,13 @@ namespace Psychological_diagnosis_system
         MySqlConnection conn = null;
         MySqlDataReader rdr = null;
         DataService dataService = new DataService(pds);
+        MainWindowViewModel _mainWindowViewModel;
         public MainWindow()
         {
             InitializeComponent();
-            this.DataContext = new MainWindowViewModel();
+            MainWindowViewModel mainWindowViewModel = new MainWindowViewModel();
+            _mainWindowViewModel = mainWindowViewModel;
+            this.DataContext = _mainWindowViewModel;
         }
         private void Exit_Click(object sender, RoutedEventArgs e)
         {
@@ -93,19 +98,59 @@ namespace Psychological_diagnosis_system
 
         private void analytics_Click(object sender, RoutedEventArgs e)
         {
-            try
+            if(int.Parse(Count_TextBox.Text)>1)
             {
-                this.IsEnabled = false;
-                PrintDialog printDialog = new PrintDialog();
-                if (printDialog.ShowDialog() == true)
-                {
-                    printDialog.PrintVisual(print, "invoice");
-                }
+                MessageBox.Show("单次只能生产一张分析表格，请只选择一条记录");
             }
-            finally
+            else if(int.Parse(Count_TextBox.Text) ==0)
             {
-                this.IsEnabled = true;
+                MessageBox.Show("请选择一条记录");
+            }
+            else
+            {
+                RecordViewModel record = new RecordViewModel();
+                
+                //record = _mainWindowViewModel.Records.Where(x => x.IsSelected == true).FirstOrDefault();
+                record = _mainWindowViewModel.Records.FirstOrDefault(x => x.IsSelected == true);
+                AnalysisWindows analysisWindows = new AnalysisWindows(record.RecordShowDto);
+                analysisWindows.ShowDialog();
+            }
+            //try
+            //{
+            //    this.IsEnabled = false;
+            //    PrintDialog printDialog = new PrintDialog();
+            //    if (printDialog.ShowDialog() == true)
+            //    {
+            //        printDialog.PrintVisual(print, "invoice");
+            //    }
+            //}
+            //finally
+            //{
+            //    this.IsEnabled = true;
+            //}
+        }
+        public class TimeConverter : IValueConverter
+        {
+            //当值从绑定源传播给绑定目标时，调用方法Convert
+            public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+            {
+                if (value == null)
+                    return DependencyProperty.UnsetValue;
+                DateTime date = (DateTime)value;
+                return date.ToString("yyyy-MM-dd");
+            }
+            //当值从绑定目标传播给绑定源时，调用此方法ConvertBack
+            public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+            {
+                string str = value as string;
+                DateTime txtDate;
+                if (DateTime.TryParse(str, out txtDate))
+                {
+                    return txtDate;
+                }
+                return DependencyProperty.UnsetValue;
             }
         }
     }
+    
 }

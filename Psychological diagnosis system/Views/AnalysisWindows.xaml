@@ -1,0 +1,36 @@
+﻿<Window x:Class="Psychological_diagnosis_system.Views.AnalysisWindows"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Psychological_diagnosis_system.Views"
+        mc:Ignorable="d"
+        Title="AnalysisWindows" Height="1000" Width="1000">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+        <Grid>
+            <StackPanel Background="#FFE6E6E6">
+                <Button x:Name="Save_Button" ToolTip="保存" Width="40" Click="Save_Button_Click" BorderBrush="{x:Null}" Background="{x:Null}" HorizontalAlignment="Left">
+                    <StackPanel>
+                        <Image Source="print.png" Width="36" Height="36" ></Image>
+                        <TextBlock HorizontalAlignment="Stretch" TextAlignment="Center" FontSize="10">
+                            保存
+                        </TextBlock>
+                    </StackPanel>
+                </Button>
+            </StackPanel>
+           
+        </Grid>
+        <Grid Grid.Row="1" x:Name="Print_Grid">
+            <ScrollViewer BorderBrush="Black" BorderThickness="1" >
+
+                <Frame x:Name="AnalysisPage"   NavigationUIVisibility="Hidden" Width="800" BorderBrush="Gray" BorderThickness="1"></Frame>
+
+            </ScrollViewer>
+        </Grid>
+    </Grid>
+</Window>

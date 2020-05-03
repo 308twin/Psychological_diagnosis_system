@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Psychological_diagnosis_system.DtoParameters;
+using Psychological_diagnosis_system.Models;
 namespace Psychological_diagnosis_system.ViewModels
 {
     class ViewModelInfo
@@ -15,5 +12,6 @@ namespace Psychological_diagnosis_system.ViewModels
         public static string respondentId;  //当前测试者ID
         public static DateTime startTime;   //测试者答题开始时间
         public static DateTime endTime;     //结束时间
+        public static RecordShowDto analysisRecrod;
     }
 }

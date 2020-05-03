@@ -4,9 +4,12 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Psychological_diagnosis_system"
+        xmlns:localConvert="clr-namespace:Psychological_diagnosis_system.Services"
         mc:Ignorable="d"
         Title="心理测评系统" Height="900" Width="1400" WindowStartupLocation="CenterScreen"  ResizeMode="CanResizeWithGrip">
-    
+    <Window.Resources>
+        <localConvert:TimeConverter x:Key="timeConverter"></localConvert:TimeConverter>
+    </Window.Resources>
     <Grid ShowGridLines="False" x:Name="print">
         <Grid.RowDefinitions>
             <RowDefinition Height="80"></RowDefinition>
@@ -182,9 +185,9 @@
                     <DataGridTextColumn CanUserSort="True" Header="婚姻" Width="50" Binding="{Binding RecordShowDto.Marriage}"></DataGridTextColumn>
                     <DataGridTextColumn CanUserSort="True" Header="文化程度" Width="75" Binding="{Binding RecordShowDto.Education}"></DataGridTextColumn>
                     <DataGridTextColumn CanUserSort="True" Header="职业" Width="100" Binding="{Binding RecordShowDto.Career}"></DataGridTextColumn>
-                    <DataGridTextColumn CanUserSort="True" Header="住址" Width="100" Binding="{Binding RecordShowDto.Address}"></DataGridTextColumn>
+                    <DataGridTextColumn CanUserSort="True" Header="住址" Width="100" Binding="{Binding RecordShowDto.Address}" ></DataGridTextColumn>
                     <DataGridTextColumn CanUserSort="True" Header="测评项目" Width="100" Binding="{Binding RecordShowDto.Item}"></DataGridTextColumn>
-                    <DataGridTextColumn CanUserSort="True" Header="测评日期" Width="100" Binding="{Binding RecordShowDto.InputDate}"></DataGridTextColumn>
+                    <DataGridTextColumn CanUserSort="True" Header="测评日期" Width="100" Binding="{Binding RecordShowDto.InputDate,Converter={StaticResource timeConverter}}"></DataGridTextColumn>
                     <DataGridTextColumn CanUserSort="True" Header="答题时间" Width="100" Binding="{Binding RecordShowDto.AnswerTime}" ></DataGridTextColumn>
                 </DataGrid.Columns>
             </DataGrid>
@@ -192,7 +195,7 @@
         </Grid>
         <ToolBar Grid.Row="2">
             <TextBlock Text="已选择：" VerticalAlignment="Center">
-                <TextBox IsReadOnly="True" TextAlignment="Center" Width="20" Height="18" Margin="0,1,0,0" Text="{Binding Count}"></TextBox>
+                <TextBox x:Name="Count_TextBox" IsReadOnly="True" TextAlignment="Center" Width="20" Height="18" Margin="0,1,0,0" Text="{Binding Count}"></TextBox>
             </TextBlock>
         </ToolBar>
 
