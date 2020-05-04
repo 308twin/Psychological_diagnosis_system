@@ -103,5 +103,9 @@ namespace Psychological_diagnosis_system.Services
         {
             return _pdsEntity.self_rating_depression_scale.ToList();
         }
+        public List<scl90_scale> GetScl90_Scales()
+        {
+            return _pdsEntity.scl90_scale.ToList();
+        }
     }
 }

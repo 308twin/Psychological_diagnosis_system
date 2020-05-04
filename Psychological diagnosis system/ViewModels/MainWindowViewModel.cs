@@ -12,6 +12,7 @@ using Psychological_diagnosis_system.DtoParameters;
 using System.Windows;
 using Psychological_diagnosis_system.Views;
 using System.Collections.ObjectModel;
+using Psychological_diagnosis_system.Repositories;
 
 namespace Psychological_diagnosis_system.ViewModels
 {
@@ -114,12 +115,23 @@ namespace Psychological_diagnosis_system.ViewModels
         }
         private void DeleteRecord()
         {
+            
             Console.WriteLine(count);
-            var selectedUser = this.record.Where(x => x.IsSelected == true).Select(x => x.RecordShowDto.Name).ToList();
-            if (selectedUser==null||selectedUser.Count==0)
+            var selectedRecord = this.record.Where(x => x.IsSelected == true).Select(x => x.RecordShowDto.Record_id).ToList();
+            if (selectedRecord == null || selectedRecord.Count == 0)
                 MessageBox.Show("无选择");
             else
-                MessageBox.Show(selectedUser[0]);
+            {
+                RecordRepository recordRepository = new RecordRepository();
+                foreach (var record in selectedRecord)
+                {
+                    Console.WriteLine(record);
+                    recordRepository.DeleteRecord(record);
+
+                }
+                MessageBox.Show("删除成功！");
+                LoadRecordShowDto();
+            }
         }
         private void SortById()
         {

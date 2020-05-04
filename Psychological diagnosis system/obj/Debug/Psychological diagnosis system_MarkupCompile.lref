@@ -2,6 +2,7 @@
 
 FD:\Psychological diagnosis system\Psychological diagnosis system\Views\AddUserWindows.xaml;;
 FD:\Psychological diagnosis system\Psychological diagnosis system\Views\AnalysisPages\SASAnalysisPage.xaml;;
+FD:\Psychological diagnosis system\Psychological diagnosis system\Views\AnalysisPages\SDSAnalysisPage.xaml;;
 FD:\Psychological diagnosis system\Psychological diagnosis system\Views\AnalysisWindows.xaml;;
 FD:\Psychological diagnosis system\Psychological diagnosis system\Views\AnswerWindow.xaml;;
 FD:\Psychological diagnosis system\Psychological diagnosis system\Views\AreaSelect.xaml;;
@@ -14,4 +15,6 @@ FD:\Psychological diagnosis system\Psychological diagnosis system\Views\ScalePag
 FD:\Psychological diagnosis system\Psychological diagnosis system\Views\ScalePages\SDSPage.xaml;;
 FD:\Psychological diagnosis system\Psychological diagnosis system\Views\SearchWindow.xaml;;
 FD:\Psychological diagnosis system\Psychological diagnosis system\Views\UserWindow.xaml;;
+FD:\Psychological diagnosis system\Psychological diagnosis system\Views\ScalePages\SCL90Page.xaml;;
+FD:\Psychological diagnosis system\Psychological diagnosis system\Views\AnalysisPages\SCL90AnalysisPage.xaml;;
 

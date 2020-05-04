@@ -22,6 +22,36 @@
     <Property Name="TENDENCY" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="WEIGHT" Type="Int32" Nullable="false" />
   </EntityType>
+  <EntityType Name="scl90_answer_card">
+    <Key>
+      <PropertyRef Name="GUID" />
+    </Key>
+    <Property Name="GUID" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="RECORD_ID" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="QUES_NUM" Type="Int32" Nullable="false" />
+    <Property Name="SELECT" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TENDENCY" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="WEIGHT" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="scl90_scale">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="SELECT_NUM" Type="Int32" Nullable="false" />
+    <Property Name="CONTENT" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TENDENCY" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SELECT_A_CONTENT" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SELECT_B_CONTENT" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SELECT_C_CONTENT" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SELECT_D_CONTENT" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SELECT_E_CONTENT" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="A_WEIGHT" Type="Int32" Nullable="false" />
+    <Property Name="B_WEIGHT" Type="Int32" Nullable="false" />
+    <Property Name="C_WEIGHT" Type="Int32" Nullable="false" />
+    <Property Name="D_WEIGHT" Type="Int32" Nullable="false" />
+    <Property Name="E_WEIGHT" Type="Int32" Nullable="false" />
+  </EntityType>
   <EntityType Name="sds_answer_card">
     <Key>
       <PropertyRef Name="GUID" />
@@ -127,6 +157,8 @@
   <EntityContainer Name="pdsEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="record" EntityType="Self.record" />
     <EntitySet Name="sas_answer_card" EntityType="Self.sas_answer_card" />
+    <EntitySet Name="scl90_answer_card" EntityType="Self.scl90_answer_card" />
+    <EntitySet Name="scl90_scale" EntityType="Self.scl90_scale" />
     <EntitySet Name="sds_answer_card" EntityType="Self.sds_answer_card" />
     <EntitySet Name="self_rating_anxiety_scale" EntityType="Self.self_rating_anxiety_scale" />
     <EntitySet Name="self_rating_depression_scale" EntityType="Self.self_rating_depression_scale" />

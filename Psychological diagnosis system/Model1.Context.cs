@@ -27,6 +27,8 @@ namespace Psychological_diagnosis_system
     
         public virtual DbSet<record> record { get; set; }
         public virtual DbSet<sas_answer_card> sas_answer_card { get; set; }
+        public virtual DbSet<scl90_answer_card> scl90_answer_card { get; set; }
+        public virtual DbSet<scl90_scale> scl90_scale { get; set; }
         public virtual DbSet<sds_answer_card> sds_answer_card { get; set; }
         public virtual DbSet<self_rating_anxiety_scale> self_rating_anxiety_scale { get; set; }
         public virtual DbSet<self_rating_depression_scale> self_rating_depression_scale { get; set; }

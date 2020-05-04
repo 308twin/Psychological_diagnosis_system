@@ -51,3 +51,4 @@ D:\Psychological diagnosis system\wpf_Json_Address\WpfApplication1\obj\Debug\Wpf
 D:\Psychological diagnosis system\wpf_Json_Address\WpfApplication1\obj\Debug\WpfApplication1.csproj.CopyComplete
 D:\Psychological diagnosis system\wpf_Json_Address\WpfApplication1\obj\Debug\WpfApplication1.exe
 D:\Psychological diagnosis system\wpf_Json_Address\WpfApplication1\obj\Debug\WpfApplication1.pdb
+D:\Psychological diagnosis system\wpf_Json_Address\WpfApplication1\obj\Debug\WpfApplication1.csprojAssemblyReference.cache

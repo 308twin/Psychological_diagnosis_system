@@ -81,6 +81,27 @@ namespace Psychological_diagnosis_system.Repositories
             pdsEntity.SaveChanges();
 
         }
+        public void SaveAnswerCard_SCL90(int[] card, string recordID)
+        {
+            pdsEntities pdsEntity = new pdsEntities();
+            int n = 0;
+            foreach (var i in card)
+            {
+                n++;
+                scl90_answer_card answerCard = new scl90_answer_card
+                {
+                    GUID = Guid.NewGuid().ToString(),
+                    RECORD_ID = recordID,
+                    QUES_NUM = n,
+                    SELECT = i.ToString(),
+                    TENDENCY = pdsEntity.scl90_scale.Where(x => x.ID == n).FirstOrDefault().TENDENCY,   //复用这里也需要修改,这里n用成了i出了bug
+                    WEIGHT = GetSASSelectWeight(i)
+                };
+                pdsEntity.scl90_answer_card.Add(answerCard);
+            }
+            pdsEntity.SaveChanges();
+
+        }
         public int GetSASSelectWeight(int select)
         {
             pdsEntities pdsEntity = new pdsEntities();
@@ -136,6 +157,7 @@ namespace Psychological_diagnosis_system.Repositories
             pdsEntities pds = new pdsEntities();
             var record = pds.record.FirstOrDefault(x => x.USER_ID == userID);
             //先删除答题卡，然后删除答题记录
+            //由于每个答题卡是一个表，所以每次都要写
             if(record.TEST_NAME== "SAS焦虑自评量表")
             {
                 var answer = pds.sas_answer_card.Where(x => x.RECORD_ID == record.ID);
@@ -144,10 +166,77 @@ namespace Psychological_diagnosis_system.Repositories
                     pds.sas_answer_card.Remove(i);
                 }
             }
+            if (record.TEST_NAME == "SDS抑郁自评量表")
+            {
+                var answer = pds.sds_answer_card.Where(x => x.RECORD_ID == record.ID);
+                foreach (var i in answer)
+                {
+                    pds.sds_answer_card.Remove(i);
+                }
+            }
+            if (record.TEST_NAME == "UPI大学生人格健康调查表")
+            {
+                var answer = pds.upi_answer_card.Where(x => x.RECORD_ID == record.ID);
+                foreach (var i in answer)
+                {
+                    pds.upi_answer_card.Remove(i);
+                }
+            }
+            if (record.TEST_NAME == "SCL90症状自评量表")
+            {
+                var answer = pds.scl90_answer_card.Where(x => x.RECORD_ID == record.ID);
+                foreach (var i in answer)
+                {
+                    pds.scl90_answer_card.Remove(i);
+                }
+            }
             pds.record.Remove(record);
             pds.SaveChanges();
         }
 
+        public void DeleteRecord(string recordID)
+        {
+            pdsEntities pds = new pdsEntities();
+            var record = pds.record.FirstOrDefault(x => x.ID == recordID);
+            if (record.TEST_NAME == "SAS焦虑自评量表")
+            {
+                var answer = pds.sas_answer_card.Where(x => x.RECORD_ID == record.ID);
+                foreach (var i in answer)
+                {
+                    pds.sas_answer_card.Remove(i);
+                    Console.WriteLine("已删除"+i.GUID);
+                }
+            }
+            if (record.TEST_NAME == "SDS抑郁自评量表")
+            {
+                var answer = pds.sds_answer_card.Where(x => x.RECORD_ID == record.ID);
+                foreach (var i in answer)
+                {
+                    pds.sds_answer_card.Remove(i);
+                    Console.WriteLine("已删除" + i.GUID);
+                }
+            }
+            if (record.TEST_NAME == "UPI大学生人格健康调查表")
+            {
+                var answer = pds.upi_answer_card.Where(x => x.RECORD_ID == record.ID);
+                foreach (var i in answer)
+                {
+                    pds.upi_answer_card.Remove(i);
+                    Console.WriteLine("已删除" + i.GUID);
+                }
+            }
+            if (record.TEST_NAME == "SCL90症状自评量表")
+            {
+                var answer = pds.scl90_answer_card.Where(x => x.RECORD_ID == record.ID);
+                foreach (var i in answer)
+                {
+                    pds.scl90_answer_card.Remove(i);
+                    Console.WriteLine("已删除" + i.GUID);
+                }
+            }
+            pds.record.Remove(record);
+            pds.SaveChanges();
+        }
        
     }
 }

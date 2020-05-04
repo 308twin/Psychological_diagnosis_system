@@ -25,7 +25,7 @@ namespace Psychological_diagnosis_system.ViewModels.ScalePageViewModels
         }
         public void LoadScale()
         {
-            scale = dataService.GetSelf_Rating_Depression_Scales();
+            scale = dataService.GetSelf_Rating_Depression_Scales(); //
 
         }
     }

@@ -63,6 +63,7 @@ namespace Psychological_diagnosis_system.Views.Pages
                 MessageBox.Show("请选择一位答题者");
             else
             {
+                //这里要把显示的量表名称转换为数据页的名称，添加需要在转换器添加量表明，每个量表一一对应
                 string pageName = DataConvert.ScaleNameConvert(ViewModelInfo.usingScaleDtoParameter.DbName);                
                 NavigationService nav = NavigationService.GetNavigationService(this);
                 nav.Navigate(new Uri("/Psychological diagnosis system;component/Views/ScalePages/"+pageName, UriKind.RelativeOrAbsolute));

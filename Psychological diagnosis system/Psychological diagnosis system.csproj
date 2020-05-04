@@ -228,10 +228,6 @@
     <Compile Include="DtoParameters\RecordShowDtoParameter.cs" />
     <Compile Include="DtoParameters\RespondentDtoParameters.cs" />
     <Compile Include="DtoParameters\UsingScaleDtoParameter.cs" />
-    <Compile Include="Models\AnswerInfoDto.cs" />
-    <Compile Include="Models\FourAnswerDto.cs" />
-    <Compile Include="Models\ScaleInfoShowDto.cs" />
-    <Compile Include="DtoParameters\UserShowDtoParameter.cs" />
     <Compile Include="Model1.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -247,6 +243,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Models\AnswerInfoDto.cs" />
+    <Compile Include="Models\FourAnswerDto.cs" />
+    <Compile Include="Models\ScaleInfoShowDto.cs" />
+    <Compile Include="DtoParameters\UserShowDtoParameter.cs" />
     <Compile Include="Models\TwoAnswerDto.cs" />
     <Compile Include="Models\UserShowDto.cs" />
     <Compile Include="record.cs">
@@ -258,6 +258,12 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="scale_info.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="scl90_answer_card.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="scl90_scale.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="sds_answer_card.cs">
@@ -283,6 +289,7 @@
     <Compile Include="ViewModels\AddUserViewModel.cs" />
     <Compile Include="ViewModels\AnswerViewModel.cs" />
     <Compile Include="ViewModels\ScalePageViewModels\SASViewModel.cs" />
+    <Compile Include="ViewModels\ScalePageViewModels\SCL90ViewModel.cs" />
     <Compile Include="ViewModels\ScalePageViewModels\SDSViewModel.cs" />
     <Compile Include="ViewModels\SearchViewModel.cs" />
     <Compile Include="ViewModels\SelectAnswerViewModel.cs" />
@@ -297,6 +304,12 @@
     </Compile>
     <Compile Include="Views\AnalysisPages\SASAnalysisPage.xaml.cs">
       <DependentUpon>SASAnalysisPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AnalysisPages\SCL90AnalysisPage.xaml.cs">
+      <DependentUpon>SCL90AnalysisPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AnalysisPages\SDSAnalysisPage.xaml.cs">
+      <DependentUpon>SDSAnalysisPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\AnalysisWindows.xaml.cs">
       <DependentUpon>AnalysisWindows.xaml</DependentUpon>
@@ -346,6 +359,9 @@
     <Compile Include="Views\ScalePages\SASPage.xaml.cs">
       <DependentUpon>SASPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\ScalePages\SCL90Page.xaml.cs">
+      <DependentUpon>SCL90Page.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\ScalePages\SDSPage.xaml.cs">
       <DependentUpon>SDSPage.xaml</DependentUpon>
     </Compile>
@@ -366,6 +382,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\AnalysisPages\SASAnalysisPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AnalysisPages\SCL90AnalysisPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AnalysisPages\SDSAnalysisPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -410,6 +434,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\ScalePages\SASPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ScalePages\SCL90Page.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -502,16 +530,6 @@
   <ItemGroup>
     <Resource Include="Views\print.png" />
     <Resource Include="Image\print.png" />
-    <Content Include="Model1.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model1.edmx</DependentUpon>
-      <LastGenOutput>Model1.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Model1.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model1.edmx</DependentUpon>
-      <LastGenOutput>Model1.cs</LastGenOutput>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
@@ -524,6 +542,20 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\scl2.jpg" />
+    <Resource Include="Image\scl.jpg" />
+    <Content Include="Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

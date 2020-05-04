@@ -39,8 +39,6 @@ namespace Psychological_diagnosis_system.ViewModels
             bool canAdd = true;
             if (string.IsNullOrEmpty(NewUser.NAME) ||
                 string.IsNullOrEmpty(NewUser.PROVINCE) ||
-                string.IsNullOrEmpty(NewUser.CITY) ||
-                string.IsNullOrEmpty(NewUser.DISTRICT_TOWN) ||
                 string.IsNullOrEmpty(NewUser.EDUCATION) ||
                 string.IsNullOrEmpty(NewUser.ID_NUMBER) ||
                 string.IsNullOrEmpty(NewUser.SEX) ||

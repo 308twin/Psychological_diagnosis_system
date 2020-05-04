@@ -63,7 +63,11 @@ namespace Psychological_diagnosis_system.ViewModels
                 selectItem = value;
                 this.RaisePropertyChanged("SelectItem");
 
-                ViewModelInfo.respondentId = selectItem.UserShowDto.User_id;
+                try { ViewModelInfo.respondentId = selectItem.UserShowDto.User_id; }
+                catch(NullReferenceException e)
+                {
+                    Console.WriteLine("Empty");
+                }
                 //Console.WriteLine(ViewModelInfo.respondentId);
                 //Console.WriteLine(ViewModelInfo.usingScaleDtoParameter.DbName);
             }

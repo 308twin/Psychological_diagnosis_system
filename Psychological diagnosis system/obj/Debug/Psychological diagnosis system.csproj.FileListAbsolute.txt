@@ -136,3 +136,9 @@ D:\Psychological diagnosis system\Psychological diagnosis system\obj\Debug\Views
 D:\Psychological diagnosis system\Psychological diagnosis system\obj\Debug\Views\AnalysisWindows.baml
 D:\Psychological diagnosis system\Psychological diagnosis system\obj\Debug\Views\AddUserWindows.g.cs
 D:\Psychological diagnosis system\Psychological diagnosis system\obj\Debug\Views\AddUserWindows.baml
+D:\Psychological diagnosis system\Psychological diagnosis system\obj\Debug\Views\AnalysisPages\SDSAnalysisPage.g.cs
+D:\Psychological diagnosis system\Psychological diagnosis system\obj\Debug\Views\AnalysisPages\SDSAnalysisPage.baml
+D:\Psychological diagnosis system\Psychological diagnosis system\obj\Debug\Views\ScalePages\SCL90Page.g.cs
+D:\Psychological diagnosis system\Psychological diagnosis system\obj\Debug\Views\ScalePages\SCL90Page.baml
+D:\Psychological diagnosis system\Psychological diagnosis system\obj\Debug\Views\AnalysisPages\SCL90AnalysisPage.g.cs
+D:\Psychological diagnosis system\Psychological diagnosis system\obj\Debug\Views\AnalysisPages\SCL90AnalysisPage.baml
